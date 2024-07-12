@@ -1,0 +1,12 @@
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\bin\Debug\net8.0\BUS.deps.json
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\bin\Debug\net8.0\BUS.dll
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\bin\Debug\net8.0\BUS.pdb
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.GeneratedMSBuildEditorConfig.editorconfig
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.AssemblyInfoInputs.cache
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.AssemblyInfo.cs
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.csproj.CoreCompileInputs.cache
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.sourcelink.json
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.dll
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\refint\BUS.dll
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\BUS.pdb
+D:\KhongPhaiWin\Pro1\DuAn1\BUS\obj\Debug\net8.0\ref\BUS.dll

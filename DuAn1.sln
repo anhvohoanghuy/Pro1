@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuAn1", "DuAn1\DuAn1.csproj", "{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DuAn1", "DuAn1\DuAn1.csproj", "{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
