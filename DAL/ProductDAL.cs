@@ -93,6 +93,15 @@ namespace DAL
         {
             return GetAllProduct().Where(c => c.ScreenSize <= to && c.ScreenSize >= from).ToList();
         }
-
+        public List<Color> GetAllColorOfProduct( string ID) 
+        {
+            List<ProductDetail> listProductDetail= db.ProductDetails.Where(c=>c.Idproduct==ID).ToList();
+            List<Color> listColor = new List<Color>();
+            foreach (var productDetail in listProductDetail)
+            {
+                listColor.Add(db.Colors.FirstOrDefault(c=>c.Idcolor==productDetail.Idcolor));
+            }
+            return listColor.Distinct().ToList();
+        }
     }
 }
