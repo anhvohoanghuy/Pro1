@@ -9,7 +9,7 @@ public partial class Product
 
     public string ProductImage { get; set; } = null!;
 
-    public string ProductName { get; set; } = null!;
+    public string Idcompany { get; set; } = null!;
 
     public string ProductCompany { get; set; } = null!;
 
@@ -32,6 +32,7 @@ public partial class Product
     public virtual Account IdaccountNavigation { get; set; } = null!;
 
     public virtual Cpu IdcpuNavigation { get; set; } = null!;
+    public virtual ProductCompany IdcompanyNavigation { get; set; } = null!;
 
     public virtual ICollection<ProductDetail> ProductDetails { get; set; } = new List<ProductDetail>();
 }
