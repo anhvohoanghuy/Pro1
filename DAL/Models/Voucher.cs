@@ -5,7 +5,7 @@ namespace DAL.Models;
 
 public partial class Voucher
 {
-    public string Idvorcher { get; set; } = null!;
+    public string Idvoucher { get; set; } = null!;
 
     public string VoucherName { get; set; } = null!;
 

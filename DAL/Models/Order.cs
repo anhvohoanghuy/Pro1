@@ -15,7 +15,7 @@ public partial class Order
 
     public decimal TotalAmount { get; set; }
 
-    public string? Idvorcher { get; set; }
+    public string? Idvoucher { get; set; }
 
     public bool? Paid { get; set; }
 
@@ -23,7 +23,7 @@ public partial class Order
 
     public virtual Customer IdcustomerNavigation { get; set; } = null!;
 
-    public virtual Voucher? IdvorcherNavigation { get; set; }
+    public virtual Voucher? IdvoucherNavigation { get; set; }
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }

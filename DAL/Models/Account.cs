@@ -15,8 +15,6 @@ public partial class Account
 
     public int AccountLevel { get; set; }
 
-    public virtual ICollection<Color> Colors { get; set; } = new List<Color>();
-
     public virtual ICollection<Cpu> Cpus { get; set; } = new List<Cpu>();
 
     public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>();
@@ -24,6 +22,10 @@ public partial class Account
     public virtual ICollection<Imei> Imeis { get; set; } = new List<Imei>();
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    public virtual ICollection<ProductColor> ProductColors { get; set; } = new List<ProductColor>();
+
+    public virtual ICollection<ProductCompany> ProductCompanies { get; set; } = new List<ProductCompany>();
 
     public virtual ICollection<ProductDetail> ProductDetails { get; set; } = new List<ProductDetail>();
 

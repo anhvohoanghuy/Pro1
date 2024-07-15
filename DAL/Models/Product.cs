@@ -29,10 +29,13 @@ public partial class Product
 
     public string Idaccount { get; set; } = null!;
 
+    public bool ProductStatus { get; set; }
+
     public virtual Account IdaccountNavigation { get; set; } = null!;
 
-    public virtual Cpu IdcpuNavigation { get; set; } = null!;
     public virtual ProductCompany IdcompanyNavigation { get; set; } = null!;
+
+    public virtual Cpu IdcpuNavigation { get; set; } = null!;
 
     public virtual ICollection<ProductDetail> ProductDetails { get; set; } = new List<ProductDetail>();
 }

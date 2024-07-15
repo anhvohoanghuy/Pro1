@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DAL.Respositories
 {
-    internal class ProductDetailDAL
+    public class ProductDetailDAL
     {
-        Pro1QuanLiDienThoaiFinalContext db=new Pro1QuanLiDienThoaiFinalContext();
+        Pro1QuanLiDienThoaiFinalContext db = new Pro1QuanLiDienThoaiFinalContext();
         public List<ProductDetail> GetAllProductDetail()
         { return db.ProductDetails.ToList(); }
 

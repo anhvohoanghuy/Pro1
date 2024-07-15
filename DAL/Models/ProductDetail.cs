@@ -25,7 +25,7 @@ public partial class ProductDetail
 
     public virtual Account IdaccountNavigation { get; set; } = null!;
 
-    public virtual Color IdcolorNavigation { get; set; } = null!;
+    public virtual ProductColor IdcolorNavigation { get; set; } = null!;
 
     public virtual Product IdproductNavigation { get; set; } = null!;
 

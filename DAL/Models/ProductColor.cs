@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class Color
+public partial class ProductColor
 {
     public string Idcolor { get; set; } = null!;
 
