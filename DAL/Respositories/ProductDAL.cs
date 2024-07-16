@@ -32,20 +32,25 @@ namespace DAL.Respositories
             try
             {
                 var current = GetAllProduct().FirstOrDefault(c => c.Idproduct == updateProduct.Idproduct);
-                current.ProductImage = updateProduct.ProductImage;
-                current.ProductName = updateProduct.ProductName;
-                current.Idcompany = updateProduct.Idcompany;
-                current.Ram = updateProduct.Ram;
-                current.Idcpu = updateProduct.Idcpu;
-                current.ScreenSize = updateProduct.ScreenSize;
-                current.ScreenResolution = updateProduct.ScreenResolution;
-                current.RefreshRate = updateProduct.RefreshRate;
-                current.CameraResolution = updateProduct.CameraResolution;
-                current.Pin = updateProduct.Pin;
-                current.Idaccount = updateProduct.Idaccount;
-                current.ProductStatus = updateProduct.ProductStatus;
-                db.SaveChanges();
-                return true;
+                if (current != null)
+                {
+                    current.ProductImage = updateProduct.ProductImage;
+                    current.ProductName = updateProduct.ProductName;
+                    current.Idcompany = updateProduct.Idcompany;
+                    current.Ram = updateProduct.Ram;
+                    current.Idcpu = updateProduct.Idcpu;
+                    current.ScreenSize = updateProduct.ScreenSize;
+                    current.ScreenResolution = updateProduct.ScreenResolution;
+                    current.RefreshRate = updateProduct.RefreshRate;
+                    current.CameraResolution = updateProduct.CameraResolution;
+                    current.Pin = updateProduct.Pin;
+                    current.Idaccount = updateProduct.Idaccount;
+                    current.ProductStatus = updateProduct.ProductStatus;
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                    return false;
             }
             catch
             {

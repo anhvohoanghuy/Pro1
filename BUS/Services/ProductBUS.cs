@@ -14,7 +14,7 @@ namespace BUS.Services
     {
         ProductDAL ProductDAL = new ProductDAL();
         ProductDetailDAL ProductDetailDAL = new DAL.Respositories.ProductDetailDAL();
-        ProductColorDAL productColorDAL = new ProductColorDAL();  
+        ProductColorDAL productColorDAL = new ProductColorDAL();
         public Product GetProductByID(string id)
         {
             return ProductDAL.GetAllProduct().FirstOrDefault(c => c.Idproduct == id);
@@ -39,15 +39,26 @@ namespace BUS.Services
         {
             return ProductDAL.GetAllProduct().Where(c => c.ScreenSize <= to && c.ScreenSize >= from).ToList();
         }
-        public List<ProductColor> GetAllColorOfProduct(string ID)
+        public List<ProductColor> GetAllColorOfProduct(Product current)
         {
-            List<ProductDetail> listProductDetail = ProductDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == ID).ToList();
+            List<ProductDetail> listProductDetail = ProductDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
             List<DAL.Models.ProductColor> listColor = new List<DAL.Models.ProductColor>();
             foreach (var productDetail in listProductDetail)
             {
                 listColor.Add(productColorDAL.GetAllColor().FirstOrDefault(c => c.Idcolor == productDetail.Idcolor));
             }
             return listColor.Distinct().ToList();
+        }
+        public List<int> GetAllStorageOfProduct(Product current)
+        {
+            List<ProductDetail> listProductDetail = ProductDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
+            List<int> listStorage = new List<int>();
+            foreach (var productDetail in listProductDetail)
+            {
+                listStorage.Add(productDetail.Storage);
+            }
+            listStorage.Sort();
+            return listStorage.Distinct().ToList();
         }
     }
 }
