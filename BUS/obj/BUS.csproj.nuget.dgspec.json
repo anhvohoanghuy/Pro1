@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj": {}
+    "D:\\clone\\Pro1\\BUS\\BUS.csproj": {}
   },
   "projects": {
-    "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj": {
+    "D:\\clone\\Pro1\\BUS\\BUS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj",
+        "projectUniqueName": "D:\\clone\\Pro1\\BUS\\BUS.csproj",
         "projectName": "BUS",
-        "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj",
-        "packagesPath": "C:\\Users\\chinh\\.nuget\\packages\\",
-        "outputPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\obj\\",
+        "projectPath": "D:\\clone\\Pro1\\BUS\\BUS.csproj",
+        "packagesPath": "C:\\Users\\tranx\\.nuget\\packages\\",
+        "outputPath": "D:\\clone\\Pro1\\BUS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\chinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tranx\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
