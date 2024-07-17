@@ -14,6 +14,7 @@ public partial class Account
     public string Email { get; set; } = null!;
 
     public int AccountLevel { get; set; }
+    public bool AccountStatus { get; set; }
 
     public virtual ICollection<Cpu> Cpus { get; set; } = new List<Cpu>();
 

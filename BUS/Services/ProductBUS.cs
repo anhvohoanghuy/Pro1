@@ -19,6 +19,54 @@ namespace BUS.Services
         {
             return ProductDAL.GetAllProduct().FirstOrDefault(c => c.Idproduct == id);
         }
+        public bool AddNewProduct(string idProduct, string productImage, string productName, string idCompany, int ram,string idCPU, float screenSize, string screenResolution, int refeshRate, float cameraResolution,int pin, string idAccount,bool productStatus)
+        {
+            Product product = new Product()
+            {
+                Idproduct= idProduct,
+                ProductImage= productImage,
+                ProductName= productName,
+                Idcompany= idCompany,
+                Ram=ram,
+                Idcpu=idCPU,
+                ScreenSize=screenSize,
+                ScreenResolution=screenResolution,
+                RefreshRate=refeshRate,
+                CameraResolution=cameraResolution,
+                Pin=pin,
+                Idaccount=idAccount,
+            };
+            if (ProductDAL.AddNewProduct(product))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        public bool UpdateProduct(string idProduct, string productImage, string productName, string idCompany, int ram, string idCPU, float screenSize, string screenResolution, int refeshRate, float cameraResolution, int pin, string idAccount, bool productStatus)
+        {
+            Product product = new Product()
+            {
+                Idproduct = idProduct,
+                ProductImage = productImage,
+                ProductName = productName,
+                Idcompany = idCompany,
+                Ram = ram,
+                Idcpu = idCPU,
+                ScreenSize = screenSize,
+                ScreenResolution = screenResolution,
+                RefreshRate = refeshRate,
+                CameraResolution = cameraResolution,
+                Pin = pin,
+                Idaccount = idAccount,
+            };
+            if (ProductDAL.UpdateProduct(product))
+            {
+                return true;
+            }
+            else
+                return false;
+        }
         public List<Product> GetProductsByName(string name)
         {
             return ProductDAL.GetAllProduct().Where(c => c.ProductName.Contains(name)).ToList();

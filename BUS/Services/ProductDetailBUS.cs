@@ -16,6 +16,44 @@ namespace BUS.Services
         {
             return productDetail.Price;
         }
+        public bool AddNewProductDetail(string idProduct,string idProductDetail, string idColor,int storage, decimal price, string idPromotion, int wrrantyPeriod, int inventory, string idAccount)
+        {
+            ProductDetail productDetail = new ProductDetail()
+            {
+                Idproduct = idProduct,
+                IdproductDetails = idProductDetail,
+                Idcolor = idColor,
+                Storage = storage,
+                Price = price,
+                Idpromotion = idPromotion,
+                WarrantyPeriod = wrrantyPeriod,
+                Inventory = inventory,
+                Idaccount = idAccount
+            };
+            if (ProductDetailDAL.AddNewProductDetail(productDetail))
+                return true;
+            else 
+                return false;
+        }
+        public bool UpdateProductDetail(string idProduct, string idProductDetail, string idColor, int storage, decimal price, string idPromotion, int wrrantyPeriod, int inventory, string idAccount)
+        {
+            ProductDetail productDetail = new ProductDetail()
+            {
+                Idproduct = idProduct,
+                IdproductDetails = idProductDetail,
+                Idcolor = idColor,
+                Storage = storage,
+                Price = price,
+                Idpromotion = idPromotion,
+                WarrantyPeriod = wrrantyPeriod,
+                Inventory = inventory,
+                Idaccount = idAccount
+            };
+            if (ProductDetailDAL.UpdateProductDetail(productDetail))
+                return true;
+            else
+                return false;
+        }
         public ProductDetail GetProductDetailByIdProductStorageColor(string IdProduct, int storage,string IdColor)
         {
             return ProductDetailDAL.GetAllProductDetail().FirstOrDefault(c => c.Idproduct == IdProduct && c.Storage == storage && c.Idcolor == IdColor);
@@ -32,5 +70,6 @@ namespace BUS.Services
         {
             return productDetail.WarrantyPeriod;
         }
+
     }
 }
