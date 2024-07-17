@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\accountbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\services\\accountbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\cpubus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\services\\cpubus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\respositories\\cpudal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\cpudal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\promotionbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\services\\promotionbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\productdetailbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\services\\productdetailbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\productcolorbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\services\\productcolorbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\services\\productbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,18 +35,6 @@
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\promotiondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\pro1quanlidienthoaifinalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\pro1quanlidienthoaifinalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\respositories\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\respositories\\productcolordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\productcolordal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\promotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -35,12 +43,28 @@
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\productdetaildal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\respositories\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\respositories\\productdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\pro1quanlidienthoaifinalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\pro1quanlidienthoaifinalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\productdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\voucher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\productcompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\productcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\productcolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,16 +95,12 @@
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\cpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\models\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\bus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\bus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|d:\\khongphaiwin\\pro1\\duan1\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C3C65F49-FFB1-4CBB-A1D0-B93385D15DCB}|DAL\\DAL.csproj|solutionrelative:dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|d:\\khongphaiwin\\pro1\\duan1\\bus\\bus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{17B301BC-8536-4593-95F9-A3EDC7D2FFA3}|BUS\\BUS.csproj|solutionrelative:bus\\bus.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6CCD139-5ED6-4139-8746-0BD2E892EBFA}|DuAn1\\DuAn1.csproj|D:\\KhongPhaiWin\\Pro1\\DuAn1\\duan1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -102,52 +118,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccountBUS.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\AccountBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\Services\\AccountBUS.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\AccountBUS.cs",
+              "RelativeToolTip": "BUS\\Services\\AccountBUS.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAmwC4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T13:54:44.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CpuBUS.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\CpuBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\Services\\CpuBUS.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\CpuBUS.cs",
+              "RelativeToolTip": "BUS\\Services\\CpuBUS.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T13:41:43.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PromotionDAL.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\PromotionDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Respositories\\PromotionDAL.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\PromotionDAL.cs",
-              "RelativeToolTip": "DAL\\Respositories\\PromotionDAL.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAYwBIAAAAAAAAA",
+              "Title": "CpuDAL.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\CpuDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\Respositories\\CpuDAL.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\CpuDAL.cs",
+              "RelativeToolTip": "DAL\\Respositories\\CpuDAL.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAowAkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T12:26:48.322Z"
+              "WhenOpened": "2024-07-17T13:35:54.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "ProductDetailBUS.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductDetailBUS.cs",
               "RelativeDocumentMoniker": "BUS\\Services\\ProductDetailBUS.cs",
               "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductDetailBUS.cs",
               "RelativeToolTip": "BUS\\Services\\ProductDetailBUS.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAxwCAAAAAwAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:47:51.55Z",
+              "WhenOpened": "2024-07-17T13:32:48.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PromotionDAL.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\PromotionDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\Respositories\\PromotionDAL.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\PromotionDAL.cs",
+              "RelativeToolTip": "DAL\\Respositories\\PromotionDAL.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T13:15:48.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PromotionBUS.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\PromotionBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\Services\\PromotionBUS.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\PromotionBUS.cs",
+              "RelativeToolTip": "BUS\\Services\\PromotionBUS.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA+wBAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T13:26:01.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ProductColorDAL.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductColorDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Respositories\\ProductColorDAL.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductColorDAL.cs",
-              "RelativeToolTip": "DAL\\Respositories\\ProductColorDAL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABSAAAA",
+              "Title": "ProductColorBUS.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductColorBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\Services\\ProductColorBUS.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductColorBUS.cs",
+              "RelativeToolTip": "BUS\\Services\\ProductColorBUS.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:08:33.296Z"
+              "WhenOpened": "2024-07-17T13:16:44.439Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
+              "Title": "ProductDAL.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\Respositories\\ProductDAL.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDAL.cs",
+              "RelativeToolTip": "DAL\\Respositories\\ProductDAL.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwDQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T03:58:26.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductDetailDAL.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDetailDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\Respositories\\ProductDetailDAL.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDetailDAL.cs",
+              "RelativeToolTip": "DAL\\Respositories\\ProductDetailDAL.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvzQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T11:59:15.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Promotion.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Promotion.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Promotion.cs",
@@ -155,23 +247,49 @@
               "RelativeToolTip": "DAL\\Models\\Promotion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:06:43.621Z"
+              "WhenOpened": "2024-07-15T04:06:43.621Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProductDAL.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Respositories\\ProductDAL.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDAL.cs",
-              "RelativeToolTip": "DAL\\Respositories\\ProductDAL.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAkwDQAAAAhAAAA",
+              "DocumentIndex": 6,
+              "Title": "ProductBUS.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\Services\\ProductBUS.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductBUS.cs",
+              "RelativeToolTip": "BUS\\Services\\ProductBUS.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAYwD4AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T03:58:26.677Z"
+              "WhenOpened": "2024-07-15T04:10:00.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Account.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Account.cs",
+              "RelativeToolTip": "DAL\\Models\\Account.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwBAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T04:03:28.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DAL\\Models\\Product.cs",
+              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Product.cs",
+              "RelativeToolTip": "DAL\\Models\\Product.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAIwB8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T04:06:26.891Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Pro1QuanLiDienThoaiFinalContext.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Pro1QuanLiDienThoaiFinalContext.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Pro1QuanLiDienThoaiFinalContext.cs",
@@ -183,31 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProductBUS.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductBUS.cs",
-              "RelativeDocumentMoniker": "BUS\\Services\\ProductBUS.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\ProductBUS.cs",
-              "RelativeToolTip": "BUS\\Services\\ProductBUS.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAWwD4AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:10:00.06Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ProductDetailDAL.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDetailDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\Respositories\\ProductDetailDAL.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Respositories\\ProductDetailDAL.cs",
-              "RelativeToolTip": "DAL\\Respositories\\ProductDetailDAL.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAowDQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:59:15.597Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "ProductDetail.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\ProductDetail.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\ProductDetail.cs",
@@ -219,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "Voucher.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Voucher.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Voucher.cs",
@@ -231,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "ProductCompany.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\ProductCompany.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\ProductCompany.cs",
@@ -243,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "ProductColor.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\ProductColor.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\ProductColor.cs",
@@ -255,19 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Product.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Product.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Product.cs",
-              "RelativeToolTip": "DAL\\Models\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:06:26.891Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "OrderDetail.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\OrderDetail.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\OrderDetail.cs",
@@ -279,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Order.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Order.cs",
@@ -291,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 20,
               "Title": "Imei.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Imei.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Imei.cs",
@@ -303,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 21,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Customer.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Customer.cs",
@@ -315,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 22,
               "Title": "Cpu.cs",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Cpu.cs",
               "RelativeDocumentMoniker": "DAL\\Models\\Cpu.cs",
@@ -327,19 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Account.cs",
-              "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "DAL\\Models\\Account.cs",
-              "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\Models\\Account.cs",
-              "RelativeToolTip": "DAL\\Models\\Account.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:03:28.092Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "BUS.csproj",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\BUS.csproj",
               "RelativeDocumentMoniker": "BUS\\BUS.csproj",
@@ -351,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 24,
               "Title": "DAL.csproj",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\DAL.csproj",
               "RelativeDocumentMoniker": "DAL\\DAL.csproj",
@@ -363,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DuAn1\\Form1.cs",
               "RelativeDocumentMoniker": "DuAn1\\Form1.cs",
@@ -374,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "DuAn1.csproj",
               "DocumentMoniker": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DuAn1\\DuAn1.csproj",
               "RelativeDocumentMoniker": "DuAn1\\DuAn1.csproj",

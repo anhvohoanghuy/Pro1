@@ -12,6 +12,10 @@ namespace BUS.Services
     {
         ProductDetailDAL ProductDetailDAL = new ProductDetailDAL();
         PromotionDAL PromotionDAL = new PromotionDAL();
+        public List<ProductDetail> GetAllProductDetail()
+        {
+            return ProductDetailDAL.GetAllProductDetail();
+        }
         public decimal GetPriceOfProductDetail(ProductDetail productDetail)
         {
             return productDetail.Price;
