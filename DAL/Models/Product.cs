@@ -11,7 +11,7 @@ public partial class Product
 
     public string ProductName { get; set; } = null!;
 
-    public string ProductCompany { get; set; } = null!;
+    public string Idcompany { get; set; } = null!;
 
     public int Ram { get; set; }
 
@@ -29,7 +29,11 @@ public partial class Product
 
     public string Idaccount { get; set; } = null!;
 
+    public bool ProductStatus { get; set; }
+
     public virtual Account IdaccountNavigation { get; set; } = null!;
+
+    public virtual ProductCompany IdcompanyNavigation { get; set; } = null!;
 
     public virtual Cpu IdcpuNavigation { get; set; } = null!;
 
