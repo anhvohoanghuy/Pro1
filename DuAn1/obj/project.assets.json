@@ -2924,11 +2924,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DuAn1\\DuAn1.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DuAn1\\DuAn1.csproj",
       "projectName": "DuAn1",
-      "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DuAn1\\DuAn1.csproj",
+      "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DuAn1\\DuAn1.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DuAn1\\obj\\",
+      "outputPath": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DuAn1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2949,8 +2949,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\BUS\\BUS.csproj": {
-              "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\BUS\\BUS.csproj"
+            "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\BUS\\BUS.csproj": {
+              "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\BUS\\BUS.csproj"
             }
           }
         }

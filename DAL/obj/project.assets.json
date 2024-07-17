@@ -4112,11 +4112,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\PC\\OneDrive\\Desktop\\DuAn1\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4183,13 +4183,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\PC\\OneDrive\\Desktop\\Duan1\\DAL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
