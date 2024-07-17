@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel1 = new Panel();
             vbButton1 = new CustomButton.VBButton();
             textBox7 = new TextBox();
@@ -48,6 +52,12 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
+            EmployeeId = new DataGridViewTextBoxColumn();
+            Username = new DataGridViewTextBoxColumn();
+            Password = new DataGridViewTextBoxColumn();
+            name = new DataGridViewTextBoxColumn();
+            HomeTown = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -287,14 +297,93 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.MediumSlateBlue;
-            dataGridView1.Location = new Point(40, 21);
+            dataGridView1.Location = new Point(3, 27);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1108, 292);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(1175, 320);
+            dataGridView1.TabIndex = 1;
+            // 
+            // EmployeeId
+            // 
+            EmployeeId.HeaderText = "Employee Id";
+            EmployeeId.MinimumWidth = 6;
+            EmployeeId.Name = "EmployeeId";
+            EmployeeId.ReadOnly = true;
+            // 
+            // Username
+            // 
+            Username.HeaderText = "Username";
+            Username.MinimumWidth = 6;
+            Username.Name = "Username";
+            Username.ReadOnly = true;
+            // 
+            // Password
+            // 
+            Password.HeaderText = "Password";
+            Password.MinimumWidth = 6;
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            // 
+            // name
+            // 
+            name.HeaderText = "Employee name";
+            name.MinimumWidth = 6;
+            name.Name = "name";
+            name.ReadOnly = true;
+            // 
+            // HomeTown
+            // 
+            HomeTown.HeaderText = "hometown";
+            HomeTown.MinimumWidth = 6;
+            HomeTown.Name = "HomeTown";
+            HomeTown.ReadOnly = true;
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            Email.ReadOnly = true;
             // 
             // FormVoucher
             // 
@@ -332,8 +421,14 @@
         private CustomButton.VBButton vbButton2;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private DataGridView dataGridView1;
         private TextBox textBox7;
         private CustomButton.VBButton vbButton1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn EmployeeId;
+        private DataGridViewTextBoxColumn Username;
+        private DataGridViewTextBoxColumn Password;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn HomeTown;
+        private DataGridViewTextBoxColumn Email;
     }
 }

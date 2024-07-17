@@ -43,3 +43,4 @@ D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.FormMenu.resources
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.FormProduct.resources
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.FormVoucher.resources
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.NhanVienForm.resources
+D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.ProductDeltailForm.resources

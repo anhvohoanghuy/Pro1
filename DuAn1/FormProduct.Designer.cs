@@ -28,37 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             panel2 = new Panel();
+            btnProductDetail = new CustomButton.VBButton();
+            radioButton1 = new RadioButton();
             btnExcel = new CustomButton.VBButton();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
             vbButton2 = new CustomButton.VBButton();
             btnXoa = new CustomButton.VBButton();
             btnSua = new CustomButton.VBButton();
             btnThem = new CustomButton.VBButton();
             vbButton1 = new CustomButton.VBButton();
             textBox7 = new TextBox();
-            label6 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            label9 = new Label();
-            textBox5 = new TextBox();
-            label27 = new Label();
-            label28 = new Label();
-            label29 = new Label();
-            textBox29 = new TextBox();
-            label30 = new Label();
-            textBox4 = new TextBox();
-            label31 = new Label();
-            textBox31 = new TextBox();
-            label32 = new Label();
-            textBox32 = new TextBox();
-            label33 = new Label();
-            textBox33 = new TextBox();
-            label34 = new Label();
-            textBox34 = new TextBox();
-            label35 = new Label();
-            textBox35 = new TextBox();
             label36 = new Label();
             textBox36 = new TextBox();
             label37 = new Label();
@@ -73,10 +56,6 @@
             textBox41 = new TextBox();
             label42 = new Label();
             textBox42 = new TextBox();
-            label43 = new Label();
-            textBox43 = new TextBox();
-            label44 = new Label();
-            textBox44 = new TextBox();
             label45 = new Label();
             textBox45 = new TextBox();
             labelo = new Label();
@@ -92,7 +71,12 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            radioButton1 = new RadioButton();
+            EmployeeId = new DataGridViewTextBoxColumn();
+            Username = new DataGridViewTextBoxColumn();
+            Password = new DataGridViewTextBoxColumn();
+            name = new DataGridViewTextBoxColumn();
+            HomeTown = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -103,37 +87,15 @@
             // 
             panel2.Anchor = AnchorStyles.Left;
             panel2.BackColor = SystemColors.Control;
+            panel2.Controls.Add(btnProductDetail);
             panel2.Controls.Add(radioButton1);
             panel2.Controls.Add(btnExcel);
-            panel2.Controls.Add(dateTimePicker2);
-            panel2.Controls.Add(dateTimePicker1);
             panel2.Controls.Add(vbButton2);
             panel2.Controls.Add(btnXoa);
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(vbButton1);
             panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(label6);
-            panel2.Controls.Add(textBox1);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(label9);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(label27);
-            panel2.Controls.Add(label28);
-            panel2.Controls.Add(label29);
-            panel2.Controls.Add(textBox29);
-            panel2.Controls.Add(label30);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(label31);
-            panel2.Controls.Add(textBox31);
-            panel2.Controls.Add(label32);
-            panel2.Controls.Add(textBox32);
-            panel2.Controls.Add(label33);
-            panel2.Controls.Add(textBox33);
-            panel2.Controls.Add(label34);
-            panel2.Controls.Add(textBox34);
-            panel2.Controls.Add(label35);
-            panel2.Controls.Add(textBox35);
             panel2.Controls.Add(label36);
             panel2.Controls.Add(textBox36);
             panel2.Controls.Add(label37);
@@ -148,10 +110,6 @@
             panel2.Controls.Add(textBox41);
             panel2.Controls.Add(label42);
             panel2.Controls.Add(textBox42);
-            panel2.Controls.Add(label43);
-            panel2.Controls.Add(textBox43);
-            panel2.Controls.Add(label44);
-            panel2.Controls.Add(textBox44);
             panel2.Controls.Add(label45);
             panel2.Controls.Add(textBox45);
             panel2.Controls.Add(labelo);
@@ -169,6 +127,38 @@
             panel2.Size = new Size(1427, 373);
             panel2.TabIndex = 63;
             // 
+            // btnProductDetail
+            // 
+            btnProductDetail.Anchor = AnchorStyles.Left;
+            btnProductDetail.BackColor = Color.MediumSlateBlue;
+            btnProductDetail.BackgroundColor = Color.MediumSlateBlue;
+            btnProductDetail.BorderColor = Color.PaleVioletRed;
+            btnProductDetail.BorderRadius = 20;
+            btnProductDetail.BorderSize = 0;
+            btnProductDetail.FlatAppearance.BorderSize = 0;
+            btnProductDetail.FlatStyle = FlatStyle.Flat;
+            btnProductDetail.ForeColor = Color.White;
+            btnProductDetail.Location = new Point(1262, 316);
+            btnProductDetail.Name = "btnProductDetail";
+            btnProductDetail.Size = new Size(135, 40);
+            btnProductDetail.TabIndex = 83;
+            btnProductDetail.Text = "product detail";
+            btnProductDetail.TextColor = Color.White;
+            btnProductDetail.UseVisualStyleBackColor = false;
+            btnProductDetail.Click += btnProductDetail_Click;
+            // 
+            // radioButton1
+            // 
+            radioButton1.AutoSize = true;
+            radioButton1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            radioButton1.Location = new Point(993, 123);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(143, 29);
+            radioButton1.TabIndex = 82;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "ProductStatus";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
             // btnExcel
             // 
             btnExcel.Anchor = AnchorStyles.Left;
@@ -180,29 +170,13 @@
             btnExcel.FlatAppearance.BorderSize = 0;
             btnExcel.FlatStyle = FlatStyle.Flat;
             btnExcel.ForeColor = Color.White;
-            btnExcel.Location = new Point(1140, 319);
+            btnExcel.Location = new Point(1092, 316);
             btnExcel.Name = "btnExcel";
             btnExcel.Size = new Size(135, 40);
             btnExcel.TabIndex = 81;
             btnExcel.Text = "Xuất excel";
             btnExcel.TextColor = Color.White;
             btnExcel.UseVisualStyleBackColor = false;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Anchor = AnchorStyles.Left;
-            dateTimePicker2.Location = new Point(1035, 204);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(254, 27);
-            dateTimePicker2.TabIndex = 80;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = AnchorStyles.Left;
-            dateTimePicker1.Location = new Point(1035, 147);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(254, 27);
-            dateTimePicker1.TabIndex = 79;
             // 
             // vbButton2
             // 
@@ -216,7 +190,7 @@
             vbButton2.FlatStyle = FlatStyle.Flat;
             vbButton2.ForeColor = Color.White;
             vbButton2.Image = Properties.Resources.reset__1_;
-            vbButton2.Location = new Point(964, 319);
+            vbButton2.Location = new Point(931, 316);
             vbButton2.Name = "vbButton2";
             vbButton2.Size = new Size(135, 40);
             vbButton2.TabIndex = 78;
@@ -234,7 +208,7 @@
             btnXoa.FlatAppearance.BorderSize = 0;
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(804, 319);
+            btnXoa.Location = new Point(779, 319);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new Size(135, 40);
             btnXoa.TabIndex = 77;
@@ -253,7 +227,7 @@
             btnSua.FlatAppearance.BorderSize = 0;
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(648, 319);
+            btnSua.Location = new Point(628, 316);
             btnSua.Name = "btnSua";
             btnSua.Size = new Size(135, 40);
             btnSua.TabIndex = 76;
@@ -272,7 +246,7 @@
             btnThem.FlatAppearance.BorderSize = 0;
             btnThem.FlatStyle = FlatStyle.Flat;
             btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(501, 319);
+            btnThem.Location = new Point(477, 316);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(135, 40);
             btnThem.TabIndex = 75;
@@ -311,224 +285,21 @@
             textBox7.TabIndex = 73;
             textBox7.Text = "Tìm kiếm";
             // 
-            // label6
-            // 
-            label6.Anchor = AnchorStyles.Left;
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11F);
-            label6.Location = new Point(1035, 176);
-            label6.Name = "label6";
-            label6.Size = new Size(85, 25);
-            label6.TabIndex = 72;
-            label6.Text = "EndTime";
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Left;
-            textBox1.Location = new Point(1268, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(129, 27);
-            textBox1.TabIndex = 67;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(1268, 7);
-            label1.Name = "label1";
-            label1.Size = new Size(108, 25);
-            label1.TabIndex = 62;
-            label1.Text = "ColorName";
-            // 
-            // label9
-            // 
-            label9.Anchor = AnchorStyles.Left;
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 11F);
-            label9.Location = new Point(1030, 243);
-            label9.Name = "label9";
-            label9.Size = new Size(117, 25);
-            label9.TabIndex = 61;
-            label9.Text = "ImeiNumber";
-            // 
-            // textBox5
-            // 
-            textBox5.Anchor = AnchorStyles.Left;
-            textBox5.Location = new Point(1030, 271);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(172, 27);
-            textBox5.TabIndex = 60;
-            // 
-            // label27
-            // 
-            label27.Anchor = AnchorStyles.Left;
-            label27.AutoSize = true;
-            label27.Location = new Point(779, 181);
-            label27.Name = "label27";
-            label27.Size = new Size(0, 20);
-            label27.TabIndex = 59;
-            label27.Click += label27_Click;
-            // 
-            // label28
-            // 
-            label28.Anchor = AnchorStyles.Left;
-            label28.AutoSize = true;
-            label28.Font = new Font("Segoe UI", 11F);
-            label28.Location = new Point(1030, 124);
-            label28.Name = "label28";
-            label28.Size = new Size(91, 25);
-            label28.TabIndex = 56;
-            label28.Text = "StartTime";
-            // 
-            // label29
-            // 
-            label29.Anchor = AnchorStyles.Left;
-            label29.AutoSize = true;
-            label29.Font = new Font("Segoe UI", 11F);
-            label29.Location = new Point(1035, 64);
-            label29.Name = "label29";
-            label29.Size = new Size(86, 25);
-            label29.TabIndex = 57;
-            label29.Text = "Discount";
-            // 
-            // textBox29
-            // 
-            textBox29.Anchor = AnchorStyles.Left;
-            textBox29.Location = new Point(1035, 92);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(172, 27);
-            textBox29.TabIndex = 55;
-            // 
-            // label30
-            // 
-            label30.Anchor = AnchorStyles.Left;
-            label30.AutoSize = true;
-            label30.Font = new Font("Segoe UI", 11F);
-            label30.Location = new Point(1035, 7);
-            label30.Name = "label30";
-            label30.Size = new Size(151, 25);
-            label30.TabIndex = 53;
-            label30.Text = "PromotionName";
-            // 
-            // textBox4
-            // 
-            textBox4.Anchor = AnchorStyles.Left;
-            textBox4.Location = new Point(1035, 35);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(172, 27);
-            textBox4.TabIndex = 52;
-            // 
-            // label31
-            // 
-            label31.Anchor = AnchorStyles.Left;
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI", 11F);
-            label31.Location = new Point(779, 234);
-            label31.Name = "label31";
-            label31.Size = new Size(91, 25);
-            label31.TabIndex = 51;
-            label31.Text = "inventory";
-            // 
-            // textBox31
-            // 
-            textBox31.Anchor = AnchorStyles.Left;
-            textBox31.Location = new Point(779, 261);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(172, 27);
-            textBox31.TabIndex = 50;
-            // 
-            // label32
-            // 
-            label32.Anchor = AnchorStyles.Left;
-            label32.AutoSize = true;
-            label32.Font = new Font("Segoe UI", 11F);
-            label32.Location = new Point(779, 176);
-            label32.Name = "label32";
-            label32.Size = new Size(143, 25);
-            label32.TabIndex = 49;
-            label32.Text = "WarrantyPeriod";
-            // 
-            // textBox32
-            // 
-            textBox32.Anchor = AnchorStyles.Left;
-            textBox32.Location = new Point(779, 206);
-            textBox32.Name = "textBox32";
-            textBox32.Size = new Size(172, 27);
-            textBox32.TabIndex = 48;
-            // 
-            // label33
-            // 
-            label33.Anchor = AnchorStyles.Left;
-            label33.AutoSize = true;
-            label33.Font = new Font("Segoe UI", 11F);
-            label33.Location = new Point(779, 124);
-            label33.Name = "label33";
-            label33.Size = new Size(119, 25);
-            label33.TabIndex = 46;
-            label33.Text = "IDPromotion";
-            // 
-            // textBox33
-            // 
-            textBox33.Anchor = AnchorStyles.Left;
-            textBox33.Location = new Point(779, 147);
-            textBox33.Name = "textBox33";
-            textBox33.Size = new Size(172, 27);
-            textBox33.TabIndex = 44;
-            // 
-            // label34
-            // 
-            label34.Anchor = AnchorStyles.Left;
-            label34.AutoSize = true;
-            label34.Font = new Font("Segoe UI", 11F);
-            label34.Location = new Point(779, 59);
-            label34.Name = "label34";
-            label34.Size = new Size(54, 25);
-            label34.TabIndex = 47;
-            label34.Text = "Price";
-            // 
-            // textBox34
-            // 
-            textBox34.Anchor = AnchorStyles.Left;
-            textBox34.Location = new Point(779, 88);
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(172, 27);
-            textBox34.TabIndex = 45;
-            // 
-            // label35
-            // 
-            label35.Anchor = AnchorStyles.Left;
-            label35.AutoSize = true;
-            label35.Font = new Font("Segoe UI", 11F);
-            label35.Location = new Point(775, 7);
-            label35.Name = "label35";
-            label35.Size = new Size(76, 25);
-            label35.TabIndex = 43;
-            label35.Text = "Storage";
-            // 
-            // textBox35
-            // 
-            textBox35.Anchor = AnchorStyles.Left;
-            textBox35.Location = new Point(775, 31);
-            textBox35.Name = "textBox35";
-            textBox35.Size = new Size(172, 27);
-            textBox35.TabIndex = 42;
-            // 
             // label36
             // 
             label36.Anchor = AnchorStyles.Left;
             label36.AutoSize = true;
             label36.Font = new Font("Segoe UI", 11F);
-            label36.Location = new Point(501, 238);
+            label36.Location = new Point(488, 104);
             label36.Name = "label36";
-            label36.Size = new Size(74, 25);
+            label36.Size = new Size(97, 25);
             label36.TabIndex = 41;
-            label36.Text = "IdColor";
+            label36.Text = "IdAccount";
             // 
             // textBox36
             // 
             textBox36.Anchor = AnchorStyles.Left;
-            textBox36.Location = new Point(501, 261);
+            textBox36.Location = new Point(488, 127);
             textBox36.Name = "textBox36";
             textBox36.Size = new Size(172, 27);
             textBox36.TabIndex = 40;
@@ -538,7 +309,7 @@
             label37.Anchor = AnchorStyles.Left;
             label37.AutoSize = true;
             label37.Font = new Font("Segoe UI", 11F);
-            label37.Location = new Point(501, 177);
+            label37.Location = new Point(488, 12);
             label37.Name = "label37";
             label37.Size = new Size(143, 25);
             label37.TabIndex = 39;
@@ -548,7 +319,7 @@
             // 
             textBox37.Anchor = AnchorStyles.Left;
             textBox37.Font = new Font("Segoe UI", 11F);
-            textBox37.Location = new Point(501, 205);
+            textBox37.Location = new Point(488, 40);
             textBox37.Name = "textBox37";
             textBox37.Size = new Size(172, 32);
             textBox37.TabIndex = 38;
@@ -558,7 +329,7 @@
             label38.Anchor = AnchorStyles.Left;
             label38.AutoSize = true;
             label38.Font = new Font("Segoe UI", 11F);
-            label38.Location = new Point(501, 124);
+            label38.Location = new Point(238, 184);
             label38.Name = "label38";
             label38.Size = new Size(39, 25);
             label38.TabIndex = 36;
@@ -567,7 +338,7 @@
             // textBox38
             // 
             textBox38.Anchor = AnchorStyles.Left;
-            textBox38.Location = new Point(501, 147);
+            textBox38.Location = new Point(238, 207);
             textBox38.Name = "textBox38";
             textBox38.Size = new Size(172, 27);
             textBox38.TabIndex = 34;
@@ -577,7 +348,7 @@
             label39.Anchor = AnchorStyles.Left;
             label39.AutoSize = true;
             label39.Font = new Font("Segoe UI", 11F);
-            label39.Location = new Point(501, 60);
+            label39.Location = new Point(776, 104);
             label39.Name = "label39";
             label39.Size = new Size(165, 25);
             label39.TabIndex = 37;
@@ -586,7 +357,7 @@
             // textBox39
             // 
             textBox39.Anchor = AnchorStyles.Left;
-            textBox39.Location = new Point(501, 88);
+            textBox39.Location = new Point(776, 132);
             textBox39.Name = "textBox39";
             textBox39.Size = new Size(172, 27);
             textBox39.TabIndex = 35;
@@ -596,7 +367,7 @@
             label40.Anchor = AnchorStyles.Left;
             label40.AutoSize = true;
             label40.Font = new Font("Segoe UI", 11F);
-            label40.Location = new Point(501, 2);
+            label40.Location = new Point(769, 12);
             label40.Name = "label40";
             label40.Size = new Size(111, 25);
             label40.TabIndex = 33;
@@ -605,7 +376,7 @@
             // textBox40
             // 
             textBox40.Anchor = AnchorStyles.Left;
-            textBox40.Location = new Point(501, 35);
+            textBox40.Location = new Point(769, 45);
             textBox40.Name = "textBox40";
             textBox40.Size = new Size(172, 27);
             textBox40.TabIndex = 32;
@@ -615,7 +386,7 @@
             label41.Anchor = AnchorStyles.Left;
             label41.AutoSize = true;
             label41.Font = new Font("Segoe UI", 11F);
-            label41.Location = new Point(239, 233);
+            label41.Location = new Point(993, 12);
             label41.Name = "label41";
             label41.Size = new Size(157, 25);
             label41.TabIndex = 31;
@@ -624,7 +395,7 @@
             // textBox41
             // 
             textBox41.Anchor = AnchorStyles.Left;
-            textBox41.Location = new Point(239, 261);
+            textBox41.Location = new Point(1001, 40);
             textBox41.Name = "textBox41";
             textBox41.Size = new Size(172, 27);
             textBox41.TabIndex = 30;
@@ -634,7 +405,7 @@
             label42.Anchor = AnchorStyles.Left;
             label42.AutoSize = true;
             label42.Font = new Font("Segoe UI", 11F);
-            label42.Location = new Point(239, 179);
+            label42.Location = new Point(769, 184);
             label42.Name = "label42";
             label42.Size = new Size(103, 25);
             label42.TabIndex = 29;
@@ -643,55 +414,17 @@
             // textBox42
             // 
             textBox42.Anchor = AnchorStyles.Left;
-            textBox42.Location = new Point(239, 204);
+            textBox42.Location = new Point(769, 209);
             textBox42.Name = "textBox42";
             textBox42.Size = new Size(172, 27);
             textBox42.TabIndex = 28;
-            // 
-            // label43
-            // 
-            label43.Anchor = AnchorStyles.Left;
-            label43.AutoSize = true;
-            label43.Font = new Font("Segoe UI", 11F);
-            label43.Location = new Point(239, 124);
-            label43.Name = "label43";
-            label43.Size = new Size(129, 25);
-            label43.TabIndex = 26;
-            label43.Text = "ManuFacturer";
-            // 
-            // textBox43
-            // 
-            textBox43.Anchor = AnchorStyles.Left;
-            textBox43.Location = new Point(241, 149);
-            textBox43.Name = "textBox43";
-            textBox43.Size = new Size(172, 27);
-            textBox43.TabIndex = 24;
-            // 
-            // label44
-            // 
-            label44.Anchor = AnchorStyles.Left;
-            label44.AutoSize = true;
-            label44.Font = new Font("Segoe UI", 11F);
-            label44.Location = new Point(241, 65);
-            label44.Name = "label44";
-            label44.Size = new Size(98, 25);
-            label44.TabIndex = 27;
-            label44.Text = "NameCPU";
-            // 
-            // textBox44
-            // 
-            textBox44.Anchor = AnchorStyles.Left;
-            textBox44.Location = new Point(241, 90);
-            textBox44.Name = "textBox44";
-            textBox44.Size = new Size(172, 27);
-            textBox44.TabIndex = 25;
             // 
             // label45
             // 
             label45.Anchor = AnchorStyles.Left;
             label45.AutoSize = true;
             label45.Font = new Font("Segoe UI", 11F);
-            label45.Location = new Point(241, 7);
+            label45.Location = new Point(488, 184);
             label45.Name = "label45";
             label45.Size = new Size(66, 25);
             label45.TabIndex = 23;
@@ -700,7 +433,7 @@
             // textBox45
             // 
             textBox45.Anchor = AnchorStyles.Left;
-            textBox45.Location = new Point(241, 30);
+            textBox45.Location = new Point(488, 207);
             textBox45.Name = "textBox45";
             textBox45.Size = new Size(172, 27);
             textBox45.TabIndex = 22;
@@ -710,7 +443,7 @@
             labelo.Anchor = AnchorStyles.Left;
             labelo.AutoSize = true;
             labelo.Font = new Font("Segoe UI", 11F);
-            labelo.Location = new Point(12, 238);
+            labelo.Location = new Point(232, 104);
             labelo.Name = "labelo";
             labelo.Size = new Size(49, 25);
             labelo.TabIndex = 21;
@@ -719,7 +452,7 @@
             // txtRam
             // 
             txtRam.Anchor = AnchorStyles.Left;
-            txtRam.Location = new Point(14, 261);
+            txtRam.Location = new Point(234, 127);
             txtRam.Name = "txtRam";
             txtRam.Size = new Size(172, 27);
             txtRam.TabIndex = 20;
@@ -729,7 +462,7 @@
             label47.Anchor = AnchorStyles.Left;
             label47.AutoSize = true;
             label47.Font = new Font("Segoe UI", 11F);
-            label47.Location = new Point(10, 181);
+            label47.Location = new Point(238, 12);
             label47.Name = "label47";
             label47.Size = new Size(168, 25);
             label47.TabIndex = 19;
@@ -738,7 +471,7 @@
             // txtProductCompany
             // 
             txtProductCompany.Anchor = AnchorStyles.Left;
-            txtProductCompany.Location = new Point(12, 204);
+            txtProductCompany.Location = new Point(240, 35);
             txtProductCompany.Name = "txtProductCompany";
             txtProductCompany.Size = new Size(172, 27);
             txtProductCompany.TabIndex = 18;
@@ -748,7 +481,7 @@
             label48.Anchor = AnchorStyles.Left;
             label48.AutoSize = true;
             label48.Font = new Font("Segoe UI", 11F);
-            label48.Location = new Point(8, 124);
+            label48.Location = new Point(14, 184);
             label48.Name = "label48";
             label48.Size = new Size(128, 25);
             label48.TabIndex = 17;
@@ -757,7 +490,7 @@
             // txtProductName
             // 
             txtProductName.Anchor = AnchorStyles.Left;
-            txtProductName.Location = new Point(10, 147);
+            txtProductName.Location = new Point(16, 207);
             txtProductName.Name = "txtProductName";
             txtProductName.Size = new Size(172, 27);
             txtProductName.TabIndex = 16;
@@ -767,7 +500,7 @@
             label49.Anchor = AnchorStyles.Left;
             label49.AutoSize = true;
             label49.Font = new Font("Segoe UI", 11F);
-            label49.Location = new Point(10, 64);
+            label49.Location = new Point(14, 100);
             label49.Name = "label49";
             label49.Size = new Size(127, 25);
             label49.TabIndex = 17;
@@ -776,7 +509,7 @@
             // txtProductImage
             // 
             txtProductImage.Anchor = AnchorStyles.Left;
-            txtProductImage.Location = new Point(12, 90);
+            txtProductImage.Location = new Point(16, 126);
             txtProductImage.Name = "txtProductImage";
             txtProductImage.Size = new Size(172, 27);
             txtProductImage.TabIndex = 16;
@@ -823,27 +556,93 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.MediumSlateBlue;
-            dataGridView1.Location = new Point(14, 26);
+            dataGridView1.Location = new Point(3, 30);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1430, 240);
-            dataGridView1.TabIndex = 0;
+            dataGridView1.ReadOnly = true;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridViewCellStyle8.ForeColor = Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = SystemColors.HighlightText;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(1469, 235);
+            dataGridView1.TabIndex = 1;
             // 
-            // radioButton1
+            // EmployeeId
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(1268, 85);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(143, 29);
-            radioButton1.TabIndex = 82;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "ProductStatus";
-            radioButton1.UseVisualStyleBackColor = true;
+            EmployeeId.HeaderText = "Employee Id";
+            EmployeeId.MinimumWidth = 6;
+            EmployeeId.Name = "EmployeeId";
+            EmployeeId.ReadOnly = true;
+            // 
+            // Username
+            // 
+            Username.HeaderText = "Username";
+            Username.MinimumWidth = 6;
+            Username.Name = "Username";
+            Username.ReadOnly = true;
+            // 
+            // Password
+            // 
+            Password.HeaderText = "Password";
+            Password.MinimumWidth = 6;
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            // 
+            // name
+            // 
+            name.HeaderText = "Employee name";
+            name.MinimumWidth = 6;
+            name.Name = "name";
+            name.ReadOnly = true;
+            // 
+            // HomeTown
+            // 
+            HomeTown.HeaderText = "hometown";
+            HomeTown.MinimumWidth = 6;
+            HomeTown.Name = "HomeTown";
+            HomeTown.ReadOnly = true;
+            // 
+            // Email
+            // 
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            Email.ReadOnly = true;
             // 
             // FormProduct
             // 
@@ -867,34 +666,12 @@
         #endregion
 
         private Panel panel2;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
         private CustomButton.VBButton vbButton2;
         private CustomButton.VBButton btnXoa;
         private CustomButton.VBButton btnSua;
         private CustomButton.VBButton btnThem;
         private CustomButton.VBButton vbButton1;
         private TextBox textBox7;
-        private Label label6;
-        private TextBox textBox1;
-        private Label label1;
-        private Label label9;
-        private TextBox textBox5;
-        private Label label27;
-        private Label label28;
-        private Label label29;
-        private TextBox textBox29;
-        private Label label30;
-        private Label label31;
-        private TextBox textBox31;
-        private Label label32;
-        private TextBox textBox32;
-        private Label label33;
-        private TextBox textBox33;
-        private Label label34;
-        private TextBox textBox34;
-        private Label label35;
-        private TextBox textBox35;
         private Label label36;
         private TextBox textBox36;
         private Label label37;
@@ -909,10 +686,6 @@
         private TextBox textBox41;
         private Label label42;
         private TextBox textBox42;
-        private Label label43;
-        private TextBox textBox43;
-        private Label label44;
-        private TextBox textBox44;
         private Label label45;
         private TextBox textBox45;
         private Label labelo;
@@ -926,10 +699,16 @@
         private Label label50;
         private TextBox txtIDProduct;
         private GroupBox groupBox1;
-        private TextBox textBox4;
         private GroupBox groupBox2;
-        private DataGridView dataGridView1;
         private CustomButton.VBButton btnExcel;
         private RadioButton radioButton1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn EmployeeId;
+        private DataGridViewTextBoxColumn Username;
+        private DataGridViewTextBoxColumn Password;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn HomeTown;
+        private DataGridViewTextBoxColumn Email;
+        private CustomButton.VBButton btnProductDetail;
     }
 }

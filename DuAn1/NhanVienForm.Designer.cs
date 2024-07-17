@@ -112,7 +112,7 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1175, 320);
+            dataGridView1.Size = new Size(1209, 320);
             dataGridView1.TabIndex = 0;
             // 
             // EmployeeId
@@ -263,9 +263,9 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(panel1);
-            groupBox1.Location = new Point(249, 26);
+            groupBox1.Location = new Point(158, 26);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1181, 287);
+            groupBox1.Size = new Size(1272, 287);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             // 
@@ -291,9 +291,9 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
             panel1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            panel1.Location = new Point(51, 26);
+            panel1.Location = new Point(57, 26);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1127, 255);
+            panel1.Size = new Size(1121, 255);
             panel1.TabIndex = 0;
             // 
             // btnExcel
@@ -422,9 +422,9 @@
             // 
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox2.Location = new Point(249, 399);
+            groupBox2.Location = new Point(215, 399);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1181, 350);
+            groupBox2.Size = new Size(1215, 350);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách nhân viên";

@@ -29,6 +29,32 @@ namespace DuAn1
 
         private void FormProduct_Load(object sender, EventArgs e)
         {
+
+        }
+        private Form formNow;
+        private void LoadForm(Form formnew)
+        {
+            if (formNow != null)
+            {
+                formNow.Close();
+            }
+            formNow = formnew;
+            formnew.TopLevel = false;
+            formnew.FormBorderStyle = FormBorderStyle.None;
+            formnew.Dock = DockStyle.Fill;
+
+            // Thêm form mới vào Panel (giả sử bạn có Panel tên là panelContainer)
+            
+
+            formnew.BringToFront();
+            formnew.Show();
+        }
+        private Button ButtonNow;
+        private void btnProductDetail_Click(object sender, EventArgs e)
+        {
+
+           ProductDeltailForm a = new ProductDeltailForm();
+            a.Show();
             
         }
     }
