@@ -118,8 +118,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -128,7 +132,7 @@
               "RelativeDocumentMoniker": "BUS\\Services\\AccountBUS.cs",
               "ToolTip": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\Services\\AccountBUS.cs",
               "RelativeToolTip": "BUS\\Services\\AccountBUS.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAmwC4AAAAhAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAmwCkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-17T13:54:44.945Z",
               "EditorCaption": ""
@@ -143,8 +147,7 @@
               "RelativeToolTip": "BUS\\Services\\CpuBUS.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:41:43.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:41:43.7Z"
             },
             {
               "$type": "Document",
@@ -156,8 +159,7 @@
               "RelativeToolTip": "DAL\\Respositories\\CpuDAL.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAowAkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:35:54.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:35:54.261Z"
             },
             {
               "$type": "Document",
@@ -169,8 +171,7 @@
               "RelativeToolTip": "BUS\\Services\\ProductDetailBUS.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:32:48.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:32:48.811Z"
             },
             {
               "$type": "Document",
@@ -182,8 +183,7 @@
               "RelativeToolTip": "DAL\\Respositories\\PromotionDAL.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:15:48.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:15:48.909Z"
             },
             {
               "$type": "Document",
@@ -195,8 +195,7 @@
               "RelativeToolTip": "BUS\\Services\\PromotionBUS.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAA+wBAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:26:01.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:26:01.533Z"
             },
             {
               "$type": "Document",
@@ -208,8 +207,7 @@
               "RelativeToolTip": "BUS\\Services\\ProductColorBUS.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T13:16:44.439Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-17T13:16:44.439Z"
             },
             {
               "$type": "Document",
@@ -221,8 +219,7 @@
               "RelativeToolTip": "DAL\\Respositories\\ProductDAL.cs",
               "ViewState": "AQIAABoAAAAAAAAAAAAgwDQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T03:58:26.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T03:58:26.677Z"
             },
             {
               "$type": "Document",
@@ -234,8 +231,7 @@
               "RelativeToolTip": "DAL\\Respositories\\ProductDetailDAL.cs",
               "ViewState": "AQIAABMAAAAAAAAAAADwvzQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T11:59:15.597Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-16T11:59:15.597Z"
             },
             {
               "$type": "Document",
@@ -247,8 +243,7 @@
               "RelativeToolTip": "DAL\\Models\\Promotion.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:06:43.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T04:06:43.621Z"
             },
             {
               "$type": "Document",
@@ -260,8 +255,7 @@
               "RelativeToolTip": "BUS\\Services\\ProductBUS.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAYwD4AAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T04:10:00.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T04:10:00.06Z"
             },
             {
               "$type": "Document",
