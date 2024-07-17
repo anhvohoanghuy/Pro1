@@ -1,5 +1,6 @@
 ﻿using DAL.Models;
 using DAL.Repositories;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,21 @@ namespace BUS.Services
             return repos.GetAll();
         }
         //Tìm 
-        public List<Order> ChucNangTim(string id)
+        public List<Order> CNTimTheoIdOrder(string idorder)
         {
-            return repos.GetOrder(id);
+            return repos.GetByIdOrder(idorder);
+        }
+        public List<Order> CNTimTheoIdAccount(string idaccount)
+        {
+            return repos.GetByIdAccount(idaccount);
+        }
+        public List<Order> CNTimTheoIdCustom(string idcustom)
+        {
+            return repos.GetByIdCustom(idcustom);
+        }
+        public List<Order> CNTimTheoEstablishedDate(DateTime fromdate, DateTime todate)
+        {
+            return repos.GetByEstablishedDate(fromdate, todate);
         }
         //Thêm
         public string ChucNangThem(string idorder, string idaccount, string idcustomer, DateTime establishedDate, decimal totalamount, string idvoucher, bool paid)

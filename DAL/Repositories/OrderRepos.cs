@@ -19,9 +19,25 @@ namespace DAL.Repositories
         {
             return context.Orders.ToList();
         }
-        public List<Order> GetOrder(string id)
+        //Tìm theo idorder
+        public List<Order> GetByIdOrder(string idorder)
         {
-            return context.Orders.Where(o => o.Idorder == id).ToList();
+            return context.Orders.Where(o => o.Idorder == idorder).ToList();
+        }
+        //Tìm theo idAccount
+        public List<Order> GetByIdAccount(string idaccount)
+        {
+            return context.Orders.Where(p=>p.Idaccount == idaccount).ToList();
+        }
+        //Tìm theo idCustom
+        public List<Order> GetByIdCustom(string idcustom)
+        {
+            return context.Orders.Where(p => p.Idcustomer == idcustom).ToList();
+        }
+        //Tìm theo EstablishedDate
+        public List<Order> GetByEstablishedDate(DateTime fromdate, DateTime todate)
+        {
+            return context.Orders.Where(p => p.EstablishedDate >= fromdate&&p.EstablishedDate<=todate).ToList();
         }
         //Thêm order
         public bool AddOrder(Order order)
