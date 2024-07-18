@@ -2773,11 +2773,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\BUS.csproj",
+      "projectUniqueName": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj",
       "projectName": "BUS",
-      "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\BUS.csproj",
+      "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\BUS.csproj",
       "packagesPath": "C:\\Users\\chinh\\.nuget\\packages\\",
-      "outputPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\BUS\\obj\\",
+      "outputPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\BUS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2799,8 +2799,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\DAL.csproj": {
-              "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1\\DAL\\DAL.csproj"
+            "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DAL\\DAL.csproj": {
+              "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DAL\\DAL.csproj"
             }
           }
         }
