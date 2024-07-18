@@ -4106,23 +4106,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tranx\\.nuget\\packages\\": {},
+    "C:\\Users\\chinh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\clone\\Pro1\\DAL\\DAL.csproj",
+      "projectUniqueName": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "D:\\clone\\Pro1\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\tranx\\.nuget\\packages\\",
-      "outputPath": "D:\\clone\\Pro1\\DAL\\obj\\",
+      "projectPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\chinh\\.nuget\\packages\\",
+      "outputPath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tranx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\chinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
