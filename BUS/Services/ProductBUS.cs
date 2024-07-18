@@ -47,7 +47,7 @@ namespace BUS.Services
             else
                 return false;
         }
-        public bool UpdateProduct(string idProduct, string productImage, string productName, string idCompany, int ram, string idCPU, float screenSize, string screenResolution, int refeshRate, float cameraResolution, int pin, string idAccount, bool productStatus)
+        public bool UpdateProduct(string idProduct, string productImage, string productName, string idCompany, int ram, string idCPU, double screenSize, string screenResolution, int refeshRate, double cameraResolution, int pin, string idAccount, bool productStatus)
         {
             Product product = new Product()
             {

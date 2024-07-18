@@ -2,6 +2,7 @@
 using DAL.Respositories;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,16 @@ namespace BUS.Services
         public List<ProductColor> GetAllColor()
         {
             return productColorDAL.GetAllColor();
+        }
+        public List<string> GetAllIdColor()
+        {
+            var listIdColor=new List<string>();
+            var listColor= GetAllColor();
+            foreach(ProductColor color in listColor)
+            {
+                listIdColor.Add(color.Idcolor);
+            }    
+            return listIdColor; 
         }
         public bool AddNewColor(string idColor, string  colorName, string idAccount)
         {

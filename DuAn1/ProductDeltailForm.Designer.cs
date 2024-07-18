@@ -28,51 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            TextBox txtNameCpu;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            comboBox4 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cbbIdAccount = new ComboBox();
+            label1 = new Label();
+            cbbIdPromotion = new ComboBox();
+            cbbIdColor = new ComboBox();
             label2 = new Label();
-            textBox2 = new TextBox();
-            comboBox3 = new ComboBox();
-            comboBox1 = new ComboBox();
+            txtColorName = new TextBox();
+            cbbIdCpu = new ComboBox();
+            cbbIdProduct = new ComboBox();
             btnExcel = new CustomButton.VBButton();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
+            dtpEndDate = new DateTimePicker();
+            dtpStartDate = new DateTimePicker();
             vbButton2 = new CustomButton.VBButton();
-            btnXoa = new CustomButton.VBButton();
             btnSua = new CustomButton.VBButton();
             btnThem = new CustomButton.VBButton();
             vbButton1 = new CustomButton.VBButton();
             textBox7 = new TextBox();
             label6 = new Label();
             label9 = new Label();
-            textBox5 = new TextBox();
+            txtImeiNumber = new TextBox();
             label27 = new Label();
             label28 = new Label();
             label29 = new Label();
-            textBox29 = new TextBox();
+            txtDiscount = new TextBox();
             label30 = new Label();
-            textBox4 = new TextBox();
+            txtPromotionName = new TextBox();
             label31 = new Label();
-            textBox31 = new TextBox();
+            txtInventory = new TextBox();
             label32 = new Label();
-            textBox32 = new TextBox();
+            txtWarrantyPeriod = new TextBox();
             label33 = new Label();
             label34 = new Label();
-            textBox34 = new TextBox();
+            txtPrice = new TextBox();
             label35 = new Label();
-            textBox35 = new TextBox();
+            txtStorage = new TextBox();
             label36 = new Label();
             label37 = new Label();
-            textBox37 = new TextBox();
+            txtIdProductDetail = new TextBox();
             label43 = new Label();
-            textBox43 = new TextBox();
+            txtManufacturer = new TextBox();
             label44 = new Label();
-            textBox44 = new TextBox();
             label45 = new Label();
             label50 = new Label();
             groupBox2 = new GroupBox();
@@ -83,53 +84,64 @@
             name = new DataGridViewTextBoxColumn();
             HomeTown = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
+            txtNameCpu = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
+            // txtNameCpu
+            // 
+            txtNameCpu.Anchor = AnchorStyles.Left;
+            txtNameCpu.Location = new Point(17, 190);
+            txtNameCpu.Name = "txtNameCpu";
+            txtNameCpu.ReadOnly = true;
+            txtNameCpu.Size = new Size(172, 27);
+            txtNameCpu.TabIndex = 95;
+            // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(comboBox4);
-            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(cbbIdAccount);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(cbbIdPromotion);
+            groupBox1.Controls.Add(cbbIdColor);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(comboBox3);
-            groupBox1.Controls.Add(comboBox1);
+            groupBox1.Controls.Add(txtColorName);
+            groupBox1.Controls.Add(cbbIdCpu);
+            groupBox1.Controls.Add(cbbIdProduct);
             groupBox1.Controls.Add(btnExcel);
-            groupBox1.Controls.Add(dateTimePicker2);
-            groupBox1.Controls.Add(dateTimePicker1);
+            groupBox1.Controls.Add(dtpEndDate);
+            groupBox1.Controls.Add(dtpStartDate);
             groupBox1.Controls.Add(vbButton2);
-            groupBox1.Controls.Add(btnXoa);
             groupBox1.Controls.Add(btnSua);
             groupBox1.Controls.Add(btnThem);
             groupBox1.Controls.Add(vbButton1);
             groupBox1.Controls.Add(textBox7);
             groupBox1.Controls.Add(label6);
             groupBox1.Controls.Add(label9);
-            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(txtImeiNumber);
             groupBox1.Controls.Add(label27);
             groupBox1.Controls.Add(label28);
             groupBox1.Controls.Add(label29);
-            groupBox1.Controls.Add(textBox29);
+            groupBox1.Controls.Add(txtDiscount);
             groupBox1.Controls.Add(label30);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(txtPromotionName);
             groupBox1.Controls.Add(label31);
-            groupBox1.Controls.Add(textBox31);
+            groupBox1.Controls.Add(txtInventory);
             groupBox1.Controls.Add(label32);
-            groupBox1.Controls.Add(textBox32);
+            groupBox1.Controls.Add(txtWarrantyPeriod);
             groupBox1.Controls.Add(label33);
             groupBox1.Controls.Add(label34);
-            groupBox1.Controls.Add(textBox34);
+            groupBox1.Controls.Add(txtPrice);
             groupBox1.Controls.Add(label35);
-            groupBox1.Controls.Add(textBox35);
+            groupBox1.Controls.Add(txtStorage);
             groupBox1.Controls.Add(label36);
             groupBox1.Controls.Add(label37);
-            groupBox1.Controls.Add(textBox37);
+            groupBox1.Controls.Add(txtIdProductDetail);
             groupBox1.Controls.Add(label43);
-            groupBox1.Controls.Add(textBox43);
+            groupBox1.Controls.Add(txtManufacturer);
             groupBox1.Controls.Add(label44);
-            groupBox1.Controls.Add(textBox44);
+            groupBox1.Controls.Add(txtNameCpu);
             groupBox1.Controls.Add(label45);
             groupBox1.Controls.Add(label50);
             groupBox1.Location = new Point(69, 27);
@@ -138,21 +150,43 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // comboBox4
+            // cbbIdAccount
             // 
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(685, 129);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(168, 28);
-            comboBox4.TabIndex = 148;
+            cbbIdAccount.FormattingEnabled = true;
+            cbbIdAccount.Location = new Point(685, 304);
+            cbbIdAccount.Name = "cbbIdAccount";
+            cbbIdAccount.Size = new Size(168, 28);
+            cbbIdAccount.TabIndex = 151;
+            cbbIdAccount.TextChanged += cbbIdAccount_TextChanged;
             // 
-            // comboBox2
+            // label1
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(344, 135);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(168, 28);
-            comboBox2.TabIndex = 147;
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(685, 276);
+            label1.Name = "label1";
+            label1.Size = new Size(97, 25);
+            label1.TabIndex = 150;
+            label1.Text = "IdAccount";
+            // 
+            // cbbIdPromotion
+            // 
+            cbbIdPromotion.FormattingEnabled = true;
+            cbbIdPromotion.Location = new Point(685, 129);
+            cbbIdPromotion.Name = "cbbIdPromotion";
+            cbbIdPromotion.Size = new Size(168, 28);
+            cbbIdPromotion.TabIndex = 148;
+            cbbIdPromotion.TextChanged += cbbIdPromotion_TextChanged;
+            // 
+            // cbbIdColor
+            // 
+            cbbIdColor.FormattingEnabled = true;
+            cbbIdColor.Location = new Point(344, 135);
+            cbbIdColor.Name = "cbbIdColor";
+            cbbIdColor.Size = new Size(168, 28);
+            cbbIdColor.TabIndex = 147;
+            cbbIdColor.TextChanged += cbbIdColor_TextChanged;
             // 
             // label2
             // 
@@ -165,29 +199,32 @@
             label2.TabIndex = 146;
             label2.Text = "ColorName";
             // 
-            // textBox2
+            // txtColorName
             // 
-            textBox2.Anchor = AnchorStyles.Left;
-            textBox2.Location = new Point(340, 191);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(172, 27);
-            textBox2.TabIndex = 144;
+            txtColorName.Anchor = AnchorStyles.Left;
+            txtColorName.Location = new Point(340, 191);
+            txtColorName.Name = "txtColorName";
+            txtColorName.ReadOnly = true;
+            txtColorName.Size = new Size(172, 27);
+            txtColorName.TabIndex = 144;
             // 
-            // comboBox3
+            // cbbIdCpu
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(21, 135);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(168, 28);
-            comboBox3.TabIndex = 142;
+            cbbIdCpu.FormattingEnabled = true;
+            cbbIdCpu.Location = new Point(21, 135);
+            cbbIdCpu.Name = "cbbIdCpu";
+            cbbIdCpu.Size = new Size(168, 28);
+            cbbIdCpu.TabIndex = 142;
+            cbbIdCpu.TextChanged += cbbIdCpu_TextChanged;
             // 
-            // comboBox1
+            // cbbIdProduct
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(17, 69);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(168, 28);
-            comboBox1.TabIndex = 140;
+            cbbIdProduct.FormattingEnabled = true;
+            cbbIdProduct.Location = new Point(17, 69);
+            cbbIdProduct.Name = "cbbIdProduct";
+            cbbIdProduct.Size = new Size(168, 28);
+            cbbIdProduct.TabIndex = 140;
+            cbbIdProduct.TextChanged += cbbIdProduct_TextChanged;
             // 
             // btnExcel
             // 
@@ -200,7 +237,7 @@
             btnExcel.FlatAppearance.BorderSize = 0;
             btnExcel.FlatStyle = FlatStyle.Flat;
             btnExcel.ForeColor = Color.White;
-            btnExcel.Location = new Point(1095, 346);
+            btnExcel.Location = new Point(961, 349);
             btnExcel.Name = "btnExcel";
             btnExcel.Size = new Size(135, 40);
             btnExcel.TabIndex = 139;
@@ -208,21 +245,21 @@
             btnExcel.TextColor = Color.White;
             btnExcel.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker2
+            // dtpEndDate
             // 
-            dateTimePicker2.Anchor = AnchorStyles.Left;
-            dateTimePicker2.Location = new Point(979, 299);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(254, 27);
-            dateTimePicker2.TabIndex = 138;
+            dtpEndDate.Anchor = AnchorStyles.Left;
+            dtpEndDate.Location = new Point(979, 299);
+            dtpEndDate.Name = "dtpEndDate";
+            dtpEndDate.Size = new Size(254, 27);
+            dtpEndDate.TabIndex = 138;
             // 
-            // dateTimePicker1
+            // dtpStartDate
             // 
-            dateTimePicker1.Anchor = AnchorStyles.Left;
-            dateTimePicker1.Location = new Point(979, 242);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(254, 27);
-            dateTimePicker1.TabIndex = 137;
+            dtpStartDate.Anchor = AnchorStyles.Left;
+            dtpStartDate.Location = new Point(979, 242);
+            dtpStartDate.Name = "dtpStartDate";
+            dtpStartDate.Size = new Size(254, 27);
+            dtpStartDate.TabIndex = 137;
             // 
             // vbButton2
             // 
@@ -236,31 +273,12 @@
             vbButton2.FlatStyle = FlatStyle.Flat;
             vbButton2.ForeColor = Color.White;
             vbButton2.Image = Properties.Resources.reset__1_;
-            vbButton2.Location = new Point(934, 346);
+            vbButton2.Location = new Point(799, 349);
             vbButton2.Name = "vbButton2";
             vbButton2.Size = new Size(135, 40);
             vbButton2.TabIndex = 136;
             vbButton2.TextColor = Color.White;
             vbButton2.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            btnXoa.Anchor = AnchorStyles.Left;
-            btnXoa.BackColor = Color.MediumSlateBlue;
-            btnXoa.BackgroundColor = Color.MediumSlateBlue;
-            btnXoa.BorderColor = Color.PaleVioletRed;
-            btnXoa.BorderRadius = 20;
-            btnXoa.BorderSize = 0;
-            btnXoa.FlatAppearance.BorderSize = 0;
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(782, 349);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(135, 40);
-            btnXoa.TabIndex = 135;
-            btnXoa.Text = "Xóa";
-            btnXoa.TextColor = Color.White;
-            btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
@@ -280,6 +298,7 @@
             btnSua.Text = "Sửa";
             btnSua.TextColor = Color.White;
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -299,6 +318,7 @@
             btnThem.Text = "Thêm";
             btnThem.TextColor = Color.White;
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // vbButton1
             // 
@@ -353,13 +373,13 @@
             label9.TabIndex = 129;
             label9.Text = "ImeiNumber";
             // 
-            // textBox5
+            // txtImeiNumber
             // 
-            textBox5.Anchor = AnchorStyles.Left;
-            textBox5.Location = new Point(979, 65);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(172, 27);
-            textBox5.TabIndex = 128;
+            txtImeiNumber.Anchor = AnchorStyles.Left;
+            txtImeiNumber.Location = new Point(979, 65);
+            txtImeiNumber.Name = "txtImeiNumber";
+            txtImeiNumber.Size = new Size(172, 27);
+            txtImeiNumber.TabIndex = 128;
             // 
             // label27
             // 
@@ -392,13 +412,14 @@
             label29.TabIndex = 126;
             label29.Text = "Discount";
             // 
-            // textBox29
+            // txtDiscount
             // 
-            textBox29.Anchor = AnchorStyles.Left;
-            textBox29.Location = new Point(979, 187);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(172, 27);
-            textBox29.TabIndex = 124;
+            txtDiscount.Anchor = AnchorStyles.Left;
+            txtDiscount.Location = new Point(979, 187);
+            txtDiscount.Name = "txtDiscount";
+            txtDiscount.ReadOnly = true;
+            txtDiscount.Size = new Size(172, 27);
+            txtDiscount.TabIndex = 124;
             // 
             // label30
             // 
@@ -411,13 +432,14 @@
             label30.TabIndex = 123;
             label30.Text = "PromotionName";
             // 
-            // textBox4
+            // txtPromotionName
             // 
-            textBox4.Anchor = AnchorStyles.Left;
-            textBox4.Location = new Point(979, 130);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(172, 27);
-            textBox4.TabIndex = 122;
+            txtPromotionName.Anchor = AnchorStyles.Left;
+            txtPromotionName.Location = new Point(979, 130);
+            txtPromotionName.Name = "txtPromotionName";
+            txtPromotionName.ReadOnly = true;
+            txtPromotionName.Size = new Size(172, 27);
+            txtPromotionName.TabIndex = 122;
             // 
             // label31
             // 
@@ -430,13 +452,13 @@
             label31.TabIndex = 121;
             label31.Text = "inventory";
             // 
-            // textBox31
+            // txtInventory
             // 
-            textBox31.Anchor = AnchorStyles.Left;
-            textBox31.Location = new Point(681, 246);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(172, 27);
-            textBox31.TabIndex = 120;
+            txtInventory.Anchor = AnchorStyles.Left;
+            txtInventory.Location = new Point(681, 246);
+            txtInventory.Name = "txtInventory";
+            txtInventory.Size = new Size(172, 27);
+            txtInventory.TabIndex = 120;
             // 
             // label32
             // 
@@ -449,13 +471,13 @@
             label32.TabIndex = 119;
             label32.Text = "WarrantyPeriod";
             // 
-            // textBox32
+            // txtWarrantyPeriod
             // 
-            textBox32.Anchor = AnchorStyles.Left;
-            textBox32.Location = new Point(681, 184);
-            textBox32.Name = "textBox32";
-            textBox32.Size = new Size(172, 27);
-            textBox32.TabIndex = 118;
+            txtWarrantyPeriod.Anchor = AnchorStyles.Left;
+            txtWarrantyPeriod.Location = new Point(681, 184);
+            txtWarrantyPeriod.Name = "txtWarrantyPeriod";
+            txtWarrantyPeriod.Size = new Size(172, 27);
+            txtWarrantyPeriod.TabIndex = 118;
             // 
             // label33
             // 
@@ -479,13 +501,13 @@
             label34.TabIndex = 117;
             label34.Text = "Price";
             // 
-            // textBox34
+            // txtPrice
             // 
-            textBox34.Anchor = AnchorStyles.Left;
-            textBox34.Location = new Point(681, 66);
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(172, 27);
-            textBox34.TabIndex = 115;
+            txtPrice.Anchor = AnchorStyles.Left;
+            txtPrice.Location = new Point(681, 66);
+            txtPrice.Name = "txtPrice";
+            txtPrice.Size = new Size(172, 27);
+            txtPrice.TabIndex = 115;
             // 
             // label35
             // 
@@ -498,13 +520,13 @@
             label35.TabIndex = 113;
             label35.Text = "Storage";
             // 
-            // textBox35
+            // txtStorage
             // 
-            textBox35.Anchor = AnchorStyles.Left;
-            textBox35.Location = new Point(340, 248);
-            textBox35.Name = "textBox35";
-            textBox35.Size = new Size(172, 27);
-            textBox35.TabIndex = 112;
+            txtStorage.Anchor = AnchorStyles.Left;
+            txtStorage.Location = new Point(340, 248);
+            txtStorage.Name = "txtStorage";
+            txtStorage.Size = new Size(172, 27);
+            txtStorage.TabIndex = 112;
             // 
             // label36
             // 
@@ -528,14 +550,14 @@
             label37.TabIndex = 109;
             label37.Text = "IdProductDetail";
             // 
-            // textBox37
+            // txtIdProductDetail
             // 
-            textBox37.Anchor = AnchorStyles.Left;
-            textBox37.Font = new Font("Segoe UI", 11F);
-            textBox37.Location = new Point(340, 65);
-            textBox37.Name = "textBox37";
-            textBox37.Size = new Size(172, 32);
-            textBox37.TabIndex = 108;
+            txtIdProductDetail.Anchor = AnchorStyles.Left;
+            txtIdProductDetail.Font = new Font("Segoe UI", 11F);
+            txtIdProductDetail.Location = new Point(340, 65);
+            txtIdProductDetail.Name = "txtIdProductDetail";
+            txtIdProductDetail.Size = new Size(172, 32);
+            txtIdProductDetail.TabIndex = 108;
             // 
             // label43
             // 
@@ -548,13 +570,14 @@
             label43.TabIndex = 96;
             label43.Text = "ManuFacturer";
             // 
-            // textBox43
+            // txtManufacturer
             // 
-            textBox43.Anchor = AnchorStyles.Left;
-            textBox43.Location = new Point(17, 249);
-            textBox43.Name = "textBox43";
-            textBox43.Size = new Size(172, 27);
-            textBox43.TabIndex = 94;
+            txtManufacturer.Anchor = AnchorStyles.Left;
+            txtManufacturer.Location = new Point(17, 249);
+            txtManufacturer.Name = "txtManufacturer";
+            txtManufacturer.ReadOnly = true;
+            txtManufacturer.Size = new Size(172, 27);
+            txtManufacturer.TabIndex = 94;
             // 
             // label44
             // 
@@ -566,14 +589,6 @@
             label44.Size = new Size(98, 25);
             label44.TabIndex = 97;
             label44.Text = "NameCPU";
-            // 
-            // textBox44
-            // 
-            textBox44.Anchor = AnchorStyles.Left;
-            textBox44.Location = new Point(17, 190);
-            textBox44.Name = "textBox44";
-            textBox44.Size = new Size(172, 27);
-            textBox44.TabIndex = 95;
             // 
             // label45
             // 
@@ -703,7 +718,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1548, 934);
+            ClientSize = new Size(1435, 934);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "ProductDeltailForm";
@@ -719,45 +734,44 @@
 
         private GroupBox groupBox1;
         private CustomButton.VBButton btnExcel;
-        private DateTimePicker dateTimePicker2;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpEndDate;
+        private DateTimePicker dtpStartDate;
         private CustomButton.VBButton vbButton2;
-        private CustomButton.VBButton btnXoa;
         private CustomButton.VBButton btnSua;
         private CustomButton.VBButton btnThem;
         private CustomButton.VBButton vbButton1;
         private TextBox textBox7;
         private Label label6;
         private Label label9;
-        private TextBox textBox5;
+        private TextBox txtImeiNumber;
         private Label label27;
         private Label label28;
         private Label label29;
-        private TextBox textBox29;
+        private TextBox txtDiscount;
         private Label label30;
-        private TextBox textBox4;
+        private TextBox txtPromotionName;
         private Label label33;
         private Label label36;
         private Label label43;
-        private TextBox textBox43;
+        private TextBox txtManufacturer;
         private Label label44;
-        private TextBox textBox44;
+        private TextBox txtNameCpu;
         private Label label45;
         private Label label50;
-        private ComboBox comboBox3;
-        private ComboBox comboBox1;
+        private ComboBox cbbIdCpu;
+        private ComboBox cbbIdProduct;
         private Label label31;
-        private TextBox textBox31;
+        private TextBox txtInventory;
         private Label label32;
-        private TextBox textBox32;
+        private TextBox txtWarrantyPeriod;
         private Label label34;
-        private TextBox textBox34;
+        private TextBox txtPrice;
         private Label label35;
-        private TextBox textBox35;
+        private TextBox txtStorage;
         private Label label37;
-        private TextBox textBox37;
+        private TextBox txtIdProductDetail;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtColorName;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn EmployeeId;
@@ -766,7 +780,9 @@
         private DataGridViewTextBoxColumn name;
         private DataGridViewTextBoxColumn HomeTown;
         private DataGridViewTextBoxColumn Email;
-        private ComboBox comboBox4;
-        private ComboBox comboBox2;
+        private ComboBox cbbIdPromotion;
+        private ComboBox cbbIdColor;
+        private ComboBox cbbIdAccount;
+        private Label label1;
     }
 }

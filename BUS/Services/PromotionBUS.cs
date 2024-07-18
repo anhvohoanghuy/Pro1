@@ -15,6 +15,16 @@ namespace BUS.Services
         {
             return promotionDAL.GetAllPromotion();
         }
+        public List<string> GetAllIdPromotion()
+        {
+            var listPromotion= GetAllPromotion();
+            var listID= new List<string>();
+            foreach (var id in listPromotion)
+            {
+                listID.Add(id.Idpromotion);
+            }
+            return listID;
+        }
         public bool AddNewPromotion(string idPromotion,string promotionName, decimal discount, DateTime startTime, DateTime endTime,string idAccount)
         {
             Promotion promotion = new Promotion()

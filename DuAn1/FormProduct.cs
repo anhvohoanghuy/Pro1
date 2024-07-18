@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.Arm;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,15 +26,15 @@ namespace DuAn1
         }
         public void LoadCbbWhenTextChange(ComboBox currentCbb, List<string> originList)
         {
-            int cursorPosition = cbbIDProduct.SelectionStart;
+            int cursorPosition = currentCbb.SelectionStart;
             var text = currentCbb.Text;
             foreach (var item in originList.Where(c => c.Contains(text)))
             {
-                cbbIDProduct.Items.Add(item);
+                currentCbb.Items.Add(item);
             }
-            cbbIDProduct.DroppedDown = true;
-            cbbIDProduct.SelectionStart = cursorPosition;
-            cbbIDProduct.SelectionLength = 0;
+            currentCbb.DroppedDown = true;
+            currentCbb.SelectionStart = cursorPosition;
+            currentCbb.SelectionLength = 0;
         }
         public bool CheckNull(params string[] strings)
         {
@@ -43,6 +44,36 @@ namespace DuAn1
                     return true;
             }
             return false;
+        }
+        public string CheckIsNumberInProduct(TextBox ram, TextBox pin, TextBox refreshRate, TextBox cameraResolution, TextBox screenSize)
+        {
+            if (int.TryParse(ram.Text, out _))
+                return "Ram phải là số nguyên";
+            else if (int.TryParse(pin.Text, out _))
+                return "Pin phải là số nguyên tính theo mAh";
+            else if (int.TryParse(refreshRate.Text, out _))
+                return "Refresh rate phải là số nguyên";
+            else if (double.TryParse(cameraResolution.Text, out _))
+                return "Camera resolution phải là số";
+            else if (double.TryParse(screenSize.Text, out _))
+                return "Screen size phải là số";
+            return null;
+        }
+        public void ResetFormProduct()
+        {
+            cbbIDProduct.Text = string.Empty;
+            txtProductImage.Clear();
+            txtProductName.Clear();
+            cbbIDAccount.Text= string.Empty;
+            txtRam.Clear();
+            txtPin.Clear();
+            txtRefreshRate.Clear();
+            cbbIDAccount.Text = string.Empty;
+            cbbIDCPU.Text = string.Empty;
+            txtScreenResolution.Clear();
+            txtCameraResolution.Clear();
+            rdoActivated.Checked = true;
+            rdoUnActivated.Checked = false;
         }
         private void FormProduct_Load(object sender, EventArgs e)
         {
@@ -89,34 +120,16 @@ namespace DuAn1
             var screenResolution = txtScreenResolution.Text;
             var cameraResolution = txtCameraResolution.Text;
             var screenSize = txtScreenSize.Text;
-            var status = rdoActivated.Checked?true:false;
-            if (CheckNull(productID,productImage,productName,idCompany,ram,pin,refreshRate,idAccount,idCPU,cameraResolution,screenResolution,screenSize)==false)
+            var status = rdoActivated.Checked ? true : false;
+            if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
             {
-                if (int.TryParse(ram, out _))
+                var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
+                if (checkNum!=null)
                 {
-                    if (int.TryParse(pin, out _))
-                    {
-                        if (int.TryParse(refreshRate, out _))
-                        {
-                            if (double.TryParse(cameraResolution, out _))
-                            {
-                                if (double.TryParse(screenSize, out _))
-                                {
-                                    productBUS.AddNewProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status);
-                                }
-                                else MessageBox.Show("ScreenSize phải là số tính theo inch");
-                            }
-                            else
-                                MessageBox.Show("Camera resolution phải là số");
-                        }
-                        else
-                            MessageBox.Show("Refresh rate phải là số nguyên");
-                    }
-                    else
-                        MessageBox.Show("Pin phải là số nguyên tính theo mAh");
+                    productBUS.AddNewProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status);
                 }
                 else
-                    MessageBox.Show("Ram phải là số nguyên");
+                    MessageBox.Show(checkNum);
             }
             else
                 MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm");
@@ -140,6 +153,35 @@ namespace DuAn1
         private void cbbIDCPU_TextUpdate(object sender, EventArgs e)
         {
             LoadCbbWhenTextChange(cbbIDCPU, cpuBUS.GetAllIDCpu());
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            var productID = cbbIDProduct.SelectedItem.ToString();
+            var productImage = txtProductImage.Text;
+            var productName = txtProductName.Text;
+            var idCompany = cbbIDCompany.SelectedItem.ToString();
+            var ram = txtRam.Text;
+            var pin = txtPin.Text;
+            var refreshRate = txtRefreshRate.Text;
+            var idAccount = cbbIDAccount.SelectedItem.ToString();
+            var idCPU = cbbIDCPU.SelectedItem.ToString();
+            var screenResolution = txtScreenResolution.Text;
+            var cameraResolution = txtCameraResolution.Text;
+            var screenSize = txtScreenSize.Text;
+            var status = rdoActivated.Checked ? true : false;
+            if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
+            {
+                var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
+                if (checkNum != null)
+                {
+                    productBUS.UpdateProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status);
+                }
+                else
+                    MessageBox.Show(checkNum);
+            }
+            else
+                MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
         }
     }
 }

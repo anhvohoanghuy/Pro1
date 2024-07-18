@@ -74,6 +74,9 @@ namespace BUS.Services
         {
             return productDetail.WarrantyPeriod;
         }
-
+        public ProductDetail GetProductDetailByID(string idProductDetail)
+        {
+            return GetAllProductDetail().FirstOrDefault(c => c.IdproductDetails == idProductDetail);
+        }
     }
 }
