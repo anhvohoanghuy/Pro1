@@ -10,10 +10,10 @@ namespace BUS.Services
 {
     public class PromotionBUS
     {
-        PromotionDAL PromotionDAL = new PromotionDAL();
+        PromotionDAL promotionDAL = new PromotionDAL();
         public List<Promotion> GetAllPromotion()
         {
-            return PromotionDAL.GetAllPromotion();
+            return promotionDAL.GetAllPromotion();
         }
         public bool AddNewPromotion(string idPromotion,string promotionName, decimal discount, DateTime startTime, DateTime endTime,string idAccount)
         {
@@ -26,7 +26,7 @@ namespace BUS.Services
                 EndTime = endTime,
                 Idaccount = idAccount
             };
-            if(PromotionDAL.AddNewPromotion(promotion))
+            if(promotionDAL.AddNewPromotion(promotion))
                 return true;
             else
                 return false;
@@ -42,7 +42,7 @@ namespace BUS.Services
                 EndTime = endTime,
                 Idaccount = idAccount
             };
-            if (PromotionDAL.UpdatePromotion(promotion))
+            if (promotionDAL.UpdatePromotion(promotion))
                 return true;
             else
                 return false;

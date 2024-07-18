@@ -10,11 +10,11 @@ namespace BUS.Services
 {
     public class ProductDetailBUS
     {
-        ProductDetailDAL ProductDetailDAL = new ProductDetailDAL();
-        PromotionDAL PromotionDAL = new PromotionDAL();
+        ProductDetailDAL productDetailDAL = new ProductDetailDAL();
+        PromotionDAL promotionDAL = new PromotionDAL();
         public List<ProductDetail> GetAllProductDetail()
         {
-            return ProductDetailDAL.GetAllProductDetail();
+            return productDetailDAL.GetAllProductDetail();
         }
         public decimal GetPriceOfProductDetail(ProductDetail productDetail)
         {
@@ -34,7 +34,7 @@ namespace BUS.Services
                 Inventory = inventory,
                 Idaccount = idAccount
             };
-            if (ProductDetailDAL.AddNewProductDetail(productDetail))
+            if (productDetailDAL.AddNewProductDetail(productDetail))
                 return true;
             else 
                 return false;
@@ -53,14 +53,14 @@ namespace BUS.Services
                 Inventory = inventory,
                 Idaccount = idAccount
             };
-            if (ProductDetailDAL.UpdateProductDetail(productDetail))
+            if (productDetailDAL.UpdateProductDetail(productDetail))
                 return true;
             else
                 return false;
         }
         public ProductDetail GetProductDetailByIdProductStorageColor(string IdProduct, int storage,string IdColor)
         {
-            return ProductDetailDAL.GetAllProductDetail().FirstOrDefault(c => c.Idproduct == IdProduct && c.Storage == storage && c.Idcolor == IdColor);
+            return productDetailDAL.GetAllProductDetail().FirstOrDefault(c => c.Idproduct == IdProduct && c.Storage == storage && c.Idcolor == IdColor);
         }
         public int GetInventoryOfProductDetail(ProductDetail productDetail)
         {
@@ -68,7 +68,7 @@ namespace BUS.Services
         }
         public decimal GetDiscountOfProductDetail(ProductDetail productDetail)
         {
-            return PromotionDAL.GetAllPromotion().FirstOrDefault(c => c.Idpromotion == productDetail.Idpromotion).Discount;
+            return promotionDAL.GetAllPromotion().FirstOrDefault(c => c.Idpromotion == productDetail.Idpromotion).Discount;
         }
         public int GetWarrantyPeriodOfProductDetail(ProductDetail productDetail)
         {

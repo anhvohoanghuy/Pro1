@@ -12,14 +12,18 @@ namespace BUS.Services
 {
     public class ProductBUS
     {
-        ProductDAL ProductDAL = new ProductDAL();
-        ProductDetailDAL ProductDetailDAL = new DAL.Respositories.ProductDetailDAL();
+        ProductDAL productDAL = new ProductDAL();
+        ProductDetailDAL productDetailDAL = new DAL.Respositories.ProductDetailDAL();
         ProductColorDAL productColorDAL = new ProductColorDAL();
+        public List<Product> GetAllProduct()
+        {
+            return productDAL.GetAllProduct();
+        }
         public Product GetProductByID(string id)
         {
-            return ProductDAL.GetAllProduct().FirstOrDefault(c => c.Idproduct == id);
+            return productDAL.GetAllProduct().FirstOrDefault(c => c.Idproduct == id);
         }
-        public bool AddNewProduct(string idProduct, string productImage, string productName, string idCompany, int ram,string idCPU, float screenSize, string screenResolution, int refeshRate, float cameraResolution,int pin, string idAccount,bool productStatus)
+        public bool AddNewProduct(string idProduct, string productImage, string productName, string idCompany, int ram,string idCPU, double screenSize, string screenResolution, int refeshRate, double cameraResolution,int pin, string idAccount,bool productStatus)
         {
             Product product = new Product()
             {
@@ -36,7 +40,7 @@ namespace BUS.Services
                 Pin=pin,
                 Idaccount=idAccount,
             };
-            if (ProductDAL.AddNewProduct(product))
+            if (productDAL.AddNewProduct(product))
             {
                 return true;
             }
@@ -60,7 +64,7 @@ namespace BUS.Services
                 Pin = pin,
                 Idaccount = idAccount,
             };
-            if (ProductDAL.UpdateProduct(product))
+            if (productDAL.UpdateProduct(product))
             {
                 return true;
             }
@@ -69,27 +73,27 @@ namespace BUS.Services
         }
         public List<Product> GetProductsByName(string name)
         {
-            return ProductDAL.GetAllProduct().Where(c => c.ProductName.Contains(name)).ToList();
+            return productDAL.GetAllProduct().Where(c => c.ProductName.Contains(name)).ToList();
         }
         public List<Product> GetProducstsByProductCompany(string productCompany)
         {
-            return ProductDAL.GetAllProduct().Where(c => c.IdcompanyNavigation.CompanyName == productCompany).ToList();
+            return productDAL.GetAllProduct().Where(c => c.IdcompanyNavigation.CompanyName == productCompany).ToList();
         }
         public List<Product> GetProductsByCPU(string cpu)
         {
-            return ProductDAL.GetAllProduct().Where(c => c.IdcpuNavigation.NameCpu == cpu).ToList();
+            return productDAL.GetAllProduct().Where(c => c.IdcpuNavigation.NameCpu == cpu).ToList();
         }
         public List<Product> GetProductByRameSize(int from, int to)
         {
-            return ProductDAL.GetAllProduct().Where(c => c.Ram <= to && c.Ram >= from).ToList();
+            return productDAL.GetAllProduct().Where(c => c.Ram <= to && c.Ram >= from).ToList();
         }
         public List<Product> GetProductByScreenSize(int from, int to)
         {
-            return ProductDAL.GetAllProduct().Where(c => c.ScreenSize <= to && c.ScreenSize >= from).ToList();
+            return productDAL.GetAllProduct().Where(c => c.ScreenSize <= to && c.ScreenSize >= from).ToList();
         }
         public List<ProductColor> GetAllColorOfProduct(Product current)
         {
-            List<ProductDetail> listProductDetail = ProductDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
+            List<ProductDetail> listProductDetail = productDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
             List<DAL.Models.ProductColor> listColor = new List<DAL.Models.ProductColor>();
             foreach (var productDetail in listProductDetail)
             {
@@ -99,7 +103,7 @@ namespace BUS.Services
         }
         public List<int> GetAllStorageOfProduct(Product current)
         {
-            List<ProductDetail> listProductDetail = ProductDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
+            List<ProductDetail> listProductDetail = productDetailDAL.GetAllProductDetail().Where(c => c.Idproduct == current.Idproduct).ToList();
             List<int> listStorage = new List<int>();
             foreach (var productDetail in listProductDetail)
             {
@@ -107,6 +111,16 @@ namespace BUS.Services
             }
             listStorage.Sort();
             return listStorage.Distinct().ToList();
+        }
+        public List<string> GetAllIDProduct()
+        {
+            var listProduct= GetAllProduct();
+            var listIDProduct = new List<string>();
+            foreach (var product in listProduct)
+            {
+                listIDProduct.Add(product.Idproduct);
+            }
+            return listIDProduct;
         }
     }
 }

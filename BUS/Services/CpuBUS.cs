@@ -10,10 +10,20 @@ namespace BUS.Services
 {
     public class CpuBUS
     {
-        CpuDAL CpuDAL = new CpuDAL();
+        CpuDAL cpuDAL = new CpuDAL();
         public List<Cpu> GetAllCPU() 
         {
-            return CpuDAL.GetAllCPU();
+            return cpuDAL.GetAllCPU();
+        }
+        public List<string> GetAllIDCpu()
+        {
+            var listCpu= GetAllCPU();
+            var listIDCpu= new List<string>();
+            foreach (var cpu in listCpu)
+            {
+                listIDCpu.Add(cpu.Idcpu);
+            }
+            return listIDCpu;
         }
         public bool AddNewCPU(string idCpu, string nameCpu, string manufacturer,string idAccount)
         {
@@ -24,7 +34,7 @@ namespace BUS.Services
                 Manufacturer = manufacturer,
                 Idaccount = idAccount
             };
-            if(CpuDAL.AddNewCPU(current))
+            if(cpuDAL.AddNewCPU(current))
                 return true;
             else
                 return false;
@@ -38,7 +48,7 @@ namespace BUS.Services
                 Manufacturer = manufacturer,
                 Idaccount = idAccount
             };
-            if (CpuDAL.UpdateCPU(current))
+            if (cpuDAL.UpdateCPU(current))
                 return true;
             else
                 return false;

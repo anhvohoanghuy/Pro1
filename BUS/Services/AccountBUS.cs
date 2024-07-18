@@ -10,10 +10,20 @@ namespace BUS.Services
 {
     public class AccountBUS
     {
-        AccountDAL AccountDAL=new AccountDAL();
+        AccountDAL accountDAL=new AccountDAL();
         public List<Account> GetAllAccount()
         {
-            return AccountDAL.GetAllAccount();
+            return accountDAL.GetAllAccount();
+        }
+        public List<string> GetAllIDAccount()
+        {
+            var listAccount = GetAllAccount();
+            var listIDAccount = new List<string>();
+            foreach (var account in listAccount)
+            {
+                listIDAccount.Add(account.Idaccount);
+            }
+            return listIDAccount;
         }
         public bool AddNewAccount(string idAccount, string passAccount, string accountName, string email, int accountLevel, bool accountStaus)
         {
@@ -26,7 +36,7 @@ namespace BUS.Services
                 AccountLevel = accountLevel,
                 AccountStatus = accountStaus
             };
-            if (AccountDAL.AddNewAccount(account))
+            if (accountDAL.AddNewAccount(account))
             {
                 return true;
             }
@@ -44,7 +54,7 @@ namespace BUS.Services
                 AccountLevel = accountLevel,
                 AccountStatus = accountStaus
             };
-            if (AccountDAL.UpdateAccount(account))
+            if (accountDAL.UpdateAccount(account))
             {
                 return true;
             }

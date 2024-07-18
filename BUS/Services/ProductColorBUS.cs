@@ -10,10 +10,10 @@ namespace BUS.Services
 {
     public class ProductColorBUS
     {
-        ProductColorDAL ProductColorDAL=new ProductColorDAL();
+        ProductColorDAL productColorDAL=new ProductColorDAL();
         public List<ProductColor> GetAllColor()
         {
-            return ProductColorDAL.GetAllColor();
+            return productColorDAL.GetAllColor();
         }
         public bool AddNewColor(string idColor, string  colorName, string idAccount)
         {
@@ -23,7 +23,7 @@ namespace BUS.Services
                 ColorName = colorName,
                 Idaccount = idAccount
             };
-            if(ProductColorDAL.AddNewColor(productColor))
+            if(productColorDAL.AddNewColor(productColor))
                  return true;
             else
                 return false;
@@ -36,7 +36,7 @@ namespace BUS.Services
                 ColorName = colorName,
                 Idaccount = idAccount
             };
-            if(ProductColorDAL.UpdateColor(productColor))
+            if(productColorDAL.UpdateColor(productColor))
                 return true;
             else
                 return false;
