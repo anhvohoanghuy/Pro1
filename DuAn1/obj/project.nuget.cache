@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "HEGUVNLkRBQ=",
+  "dgSpecHash": "RFAvkoGVHC4=",
   "success": true,
   "projectFilePath": "D:\\KhongPhaiWin\\Pro1\\DuAn1Master\\DuAn1\\DuAn1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\chinh\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",
+    "C:\\Users\\chinh\\.nuget\\packages\\epplus.system.drawing\\6.1.1\\epplus.system.drawing.6.1.1.nupkg.sha512",
+    "C:\\Users\\chinh\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "C:\\Users\\chinh\\.nuget\\packages\\system.drawing.common\\8.0.7\\system.drawing.common.8.0.7.nupkg.sha512"
+  ],
   "logs": []
 }
