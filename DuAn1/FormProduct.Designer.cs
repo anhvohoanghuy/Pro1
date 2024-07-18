@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel2 = new Panel();
+            label2 = new Label();
+            comboBox2 = new ComboBox();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
             btnProductDetail = new CustomButton.VBButton();
             radioButton1 = new RadioButton();
             btnExcel = new CustomButton.VBButton();
@@ -42,8 +46,6 @@
             btnThem = new CustomButton.VBButton();
             vbButton1 = new CustomButton.VBButton();
             textBox7 = new TextBox();
-            label36 = new Label();
-            textBox36 = new TextBox();
             label37 = new Label();
             textBox37 = new TextBox();
             label38 = new Label();
@@ -71,16 +73,19 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            EmployeeId = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
+            Idproduct = new DataGridViewTextBoxColumn();
+            img = new DataGridViewTextBoxColumn();
+            namepro = new DataGridViewTextBoxColumn();
             name = new DataGridViewTextBoxColumn();
-            HomeTown = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            label2 = new Label();
-            comboBox2 = new ComboBox();
+            ram = new DataGridViewTextBoxColumn();
+            storage = new DataGridViewTextBoxColumn();
+            IDCPU = new DataGridViewTextBoxColumn();
+            ScreenSize = new DataGridViewTextBoxColumn();
+            ScreenResolution = new DataGridViewTextBoxColumn();
+            RefreshRate = new DataGridViewTextBoxColumn();
+            CameraResolution = new DataGridViewTextBoxColumn();
+            Pin = new DataGridViewTextBoxColumn();
+            status = new DataGridViewTextBoxColumn();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -104,8 +109,6 @@
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(vbButton1);
             panel2.Controls.Add(textBox7);
-            panel2.Controls.Add(label36);
-            panel2.Controls.Add(textBox36);
             panel2.Controls.Add(label37);
             panel2.Controls.Add(textBox37);
             panel2.Controls.Add(label38);
@@ -135,6 +138,44 @@
             panel2.Size = new Size(1427, 373);
             panel2.TabIndex = 63;
             // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(1001, 181);
+            label2.Name = "label2";
+            label2.Size = new Size(76, 25);
+            label2.TabIndex = 87;
+            label2.Text = "Storage";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(1001, 209);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(172, 28);
+            comboBox2.TabIndex = 86;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(1001, 104);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 25);
+            label1.TabIndex = 85;
+            label1.Text = "Color";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(1001, 132);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(172, 28);
+            comboBox1.TabIndex = 84;
+            // 
             // btnProductDetail
             // 
             btnProductDetail.Anchor = AnchorStyles.Left;
@@ -159,7 +200,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(1217, 35);
+            radioButton1.Location = new Point(498, 123);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(143, 29);
             radioButton1.TabIndex = 82;
@@ -292,25 +333,6 @@
             textBox7.Size = new Size(403, 36);
             textBox7.TabIndex = 73;
             textBox7.Text = "Tìm kiếm";
-            // 
-            // label36
-            // 
-            label36.Anchor = AnchorStyles.Left;
-            label36.AutoSize = true;
-            label36.Font = new Font("Segoe UI", 11F);
-            label36.Location = new Point(488, 104);
-            label36.Name = "label36";
-            label36.Size = new Size(97, 25);
-            label36.TabIndex = 41;
-            label36.Text = "IdAccount";
-            // 
-            // textBox36
-            // 
-            textBox36.Anchor = AnchorStyles.Left;
-            textBox36.Location = new Point(488, 127);
-            textBox36.Name = "textBox36";
-            textBox36.Size = new Size(172, 27);
-            textBox36.TabIndex = 40;
             // 
             // label37
             // 
@@ -555,9 +577,9 @@
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Font = new Font("Segoe UI", 12F);
-            groupBox2.Location = new Point(36, 474);
+            groupBox2.Location = new Point(12, 471);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1475, 268);
+            groupBox2.Size = new Size(1646, 268);
             groupBox2.TabIndex = 66;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
@@ -569,126 +591,137 @@
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.MediumSlateBlue;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 12F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Idproduct, img, namepro, name, ram, storage, IDCPU, ScreenSize, ScreenResolution, RefreshRate, CameraResolution, Pin, status });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.MediumSlateBlue;
             dataGridView1.Location = new Point(3, 30);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.HighlightText;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1469, 235);
+            dataGridView1.Size = new Size(1640, 235);
             dataGridView1.TabIndex = 1;
             // 
-            // EmployeeId
+            // Idproduct
             // 
-            EmployeeId.HeaderText = "Employee Id";
-            EmployeeId.MinimumWidth = 6;
-            EmployeeId.Name = "EmployeeId";
-            EmployeeId.ReadOnly = true;
+            Idproduct.HeaderText = "Id product";
+            Idproduct.MinimumWidth = 6;
+            Idproduct.Name = "Idproduct";
+            Idproduct.ReadOnly = true;
             // 
-            // Username
+            // img
             // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
-            Username.ReadOnly = true;
+            img.HeaderText = "Image";
+            img.MinimumWidth = 6;
+            img.Name = "img";
+            img.ReadOnly = true;
             // 
-            // Password
+            // namepro
             // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
+            namepro.HeaderText = "Name";
+            namepro.MinimumWidth = 6;
+            namepro.Name = "namepro";
+            namepro.ReadOnly = true;
             // 
             // name
             // 
-            name.HeaderText = "Employee name";
+            name.HeaderText = "Company";
             name.MinimumWidth = 6;
             name.Name = "name";
             name.ReadOnly = true;
             // 
-            // HomeTown
+            // ram
             // 
-            HomeTown.HeaderText = "hometown";
-            HomeTown.MinimumWidth = 6;
-            HomeTown.Name = "HomeTown";
-            HomeTown.ReadOnly = true;
+            ram.HeaderText = "Ram";
+            ram.MinimumWidth = 6;
+            ram.Name = "ram";
+            ram.ReadOnly = true;
             // 
-            // Email
+            // storage
             // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
+            storage.HeaderText = "Storage";
+            storage.MinimumWidth = 6;
+            storage.Name = "storage";
+            storage.ReadOnly = true;
             // 
-            // comboBox1
+            // IDCPU
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(1001, 132);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(172, 28);
-            comboBox1.TabIndex = 84;
+            IDCPU.HeaderText = "IDCPU";
+            IDCPU.MinimumWidth = 6;
+            IDCPU.Name = "IDCPU";
+            IDCPU.ReadOnly = true;
             // 
-            // label1
+            // ScreenSize
             // 
-            label1.Anchor = AnchorStyles.Left;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11F);
-            label1.Location = new Point(1001, 104);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 25);
-            label1.TabIndex = 85;
-            label1.Text = "Color";
+            ScreenSize.HeaderText = "ScreenSize";
+            ScreenSize.MinimumWidth = 6;
+            ScreenSize.Name = "ScreenSize";
+            ScreenSize.ReadOnly = true;
             // 
-            // label2
+            // ScreenResolution
             // 
-            label2.Anchor = AnchorStyles.Left;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 11F);
-            label2.Location = new Point(1001, 181);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 25);
-            label2.TabIndex = 87;
-            label2.Text = "Storage";
+            ScreenResolution.HeaderText = "ScreenResolut";
+            ScreenResolution.MinimumWidth = 6;
+            ScreenResolution.Name = "ScreenResolution";
+            ScreenResolution.ReadOnly = true;
             // 
-            // comboBox2
+            // RefreshRate
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(1001, 209);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(172, 28);
-            comboBox2.TabIndex = 86;
+            RefreshRate.HeaderText = "RefreshRate";
+            RefreshRate.MinimumWidth = 6;
+            RefreshRate.Name = "RefreshRate";
+            RefreshRate.ReadOnly = true;
+            // 
+            // CameraResolution
+            // 
+            CameraResolution.HeaderText = "CameraResolut";
+            CameraResolution.MinimumWidth = 6;
+            CameraResolution.Name = "CameraResolution";
+            CameraResolution.ReadOnly = true;
+            // 
+            // Pin
+            // 
+            Pin.HeaderText = "Pin";
+            Pin.MinimumWidth = 6;
+            Pin.Name = "Pin";
+            Pin.ReadOnly = true;
+            // 
+            // status
+            // 
+            status.HeaderText = "Status";
+            status.MinimumWidth = 6;
+            status.Name = "status";
+            status.ReadOnly = true;
             // 
             // FormProduct
             // 
@@ -718,8 +751,6 @@
         private CustomButton.VBButton btnThem;
         private CustomButton.VBButton vbButton1;
         private TextBox textBox7;
-        private Label label36;
-        private TextBox textBox36;
         private Label label37;
         private TextBox textBox37;
         private Label label38;
@@ -749,16 +780,23 @@
         private CustomButton.VBButton btnExcel;
         private RadioButton radioButton1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn EmployeeId;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn HomeTown;
-        private DataGridViewTextBoxColumn Email;
         private CustomButton.VBButton btnProductDetail;
         private Label label2;
         private ComboBox comboBox2;
         private Label label1;
         private ComboBox comboBox1;
+        private DataGridViewTextBoxColumn Idproduct;
+        private DataGridViewTextBoxColumn img;
+        private DataGridViewTextBoxColumn namepro;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn ram;
+        private DataGridViewTextBoxColumn storage;
+        private DataGridViewTextBoxColumn IDCPU;
+        private DataGridViewTextBoxColumn ScreenSize;
+        private DataGridViewTextBoxColumn ScreenResolution;
+        private DataGridViewTextBoxColumn RefreshRate;
+        private DataGridViewTextBoxColumn CameraResolution;
+        private DataGridViewTextBoxColumn Pin;
+        private DataGridViewTextBoxColumn status;
     }
 }

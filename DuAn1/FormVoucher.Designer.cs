@@ -52,12 +52,11 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            EmployeeId = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            HomeTown = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
+            VoucherName = new DataGridViewTextBoxColumn();
+            StartTime = new DataGridViewTextBoxColumn();
+            EndTime = new DataGridViewTextBoxColumn();
+            IdVoucher = new DataGridViewTextBoxColumn();
+            Discount = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -311,7 +310,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { VoucherName, StartTime, EndTime, IdVoucher, Discount });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -343,47 +342,40 @@
             dataGridView1.Size = new Size(1175, 320);
             dataGridView1.TabIndex = 1;
             // 
-            // EmployeeId
+            // VoucherName
             // 
-            EmployeeId.HeaderText = "Employee Id";
-            EmployeeId.MinimumWidth = 6;
-            EmployeeId.Name = "EmployeeId";
-            EmployeeId.ReadOnly = true;
+            VoucherName.HeaderText = "VoucherName";
+            VoucherName.MinimumWidth = 6;
+            VoucherName.Name = "VoucherName";
+            VoucherName.ReadOnly = true;
             // 
-            // Username
+            // StartTime
             // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
-            Username.ReadOnly = true;
+            StartTime.HeaderText = "StartTime";
+            StartTime.MinimumWidth = 6;
+            StartTime.Name = "StartTime";
+            StartTime.ReadOnly = true;
             // 
-            // Password
+            // EndTime
             // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
+            EndTime.HeaderText = "EndTime";
+            EndTime.MinimumWidth = 6;
+            EndTime.Name = "EndTime";
+            EndTime.ReadOnly = true;
             // 
-            // name
+            // IdVoucher
             // 
-            name.HeaderText = "Employee name";
-            name.MinimumWidth = 6;
-            name.Name = "name";
-            name.ReadOnly = true;
+            IdVoucher.HeaderText = "IdVoucher";
+            IdVoucher.MinimumWidth = 6;
+            IdVoucher.Name = "IdVoucher";
+            IdVoucher.ReadOnly = true;
             // 
-            // HomeTown
+            // Discount
             // 
-            HomeTown.HeaderText = "hometown";
-            HomeTown.MinimumWidth = 6;
-            HomeTown.Name = "HomeTown";
-            HomeTown.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
+            Discount.HeaderText = "Discount";
+            Discount.MinimumWidth = 6;
+            Discount.Name = "Discount";
+            Discount.ReadOnly = true;
             // 
             // FormVoucher
             // 
@@ -424,11 +416,10 @@
         private TextBox textBox7;
         private CustomButton.VBButton vbButton1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn EmployeeId;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn HomeTown;
-        private DataGridViewTextBoxColumn Email;
+        private DataGridViewTextBoxColumn VoucherName;
+        private DataGridViewTextBoxColumn StartTime;
+        private DataGridViewTextBoxColumn EndTime;
+        private DataGridViewTextBoxColumn IdVoucher;
+        private DataGridViewTextBoxColumn Discount;
     }
 }

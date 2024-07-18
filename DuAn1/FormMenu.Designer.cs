@@ -117,9 +117,9 @@
             // 
             panel6.BackgroundImage = Properties.Resources.add_user;
             panel6.BackgroundImageLayout = ImageLayout.Stretch;
-            panel6.Location = new Point(120, 9);
+            panel6.Location = new Point(124, 12);
             panel6.Name = "panel6";
-            panel6.Size = new Size(29, 41);
+            panel6.Size = new Size(29, 38);
             panel6.TabIndex = 3;
             // 
             // panel3
@@ -247,7 +247,7 @@
             btnEmployee.Name = "btnEmployee";
             btnEmployee.Size = new Size(188, 50);
             btnEmployee.TabIndex = 18;
-            btnEmployee.Text = "Nhân viên";
+            btnEmployee.Text = "Tài khoản";
             btnEmployee.TextColor = Color.White;
             btnEmployee.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEmployee.UseVisualStyleBackColor = false;
@@ -296,6 +296,7 @@
             btnCreateOrder.TextColor = Color.White;
             btnCreateOrder.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCreateOrder.UseVisualStyleBackColor = false;
+            btnCreateOrder.Click += btnCreateOrder_Click;
             // 
             // btnProduct
             // 

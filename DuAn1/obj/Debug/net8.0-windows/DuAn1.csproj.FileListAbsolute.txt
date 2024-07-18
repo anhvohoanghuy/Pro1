@@ -94,3 +94,14 @@ D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\BUS.dll
 D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\DAL.dll
 D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\BUS.pdb
 D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\DAL.pdb
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\EPPlus.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.TaiKhoanForm.resources
+D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.CreateOrderForm.resources
+D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.ChiTietDonHangForm.resources

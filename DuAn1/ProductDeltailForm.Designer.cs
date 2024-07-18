@@ -77,12 +77,23 @@
             label50 = new Label();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
-            EmployeeId = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            HomeTown = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
+            idproduct = new DataGridViewTextBoxColumn();
+            Colorname = new DataGridViewTextBoxColumn();
+            IdCPU = new DataGridViewTextBoxColumn();
+            NameCpu = new DataGridViewTextBoxColumn();
+            ManuFactu = new DataGridViewTextBoxColumn();
+            IdProductdetal = new DataGridViewTextBoxColumn();
+            IdColor = new DataGridViewTextBoxColumn();
+            Storage = new DataGridViewTextBoxColumn();
+            Price = new DataGridViewTextBoxColumn();
+            IdPromotion = new DataGridViewTextBoxColumn();
+            WarrantyPe = new DataGridViewTextBoxColumn();
+            Inventory = new DataGridViewTextBoxColumn();
+            ImeiNumber = new DataGridViewTextBoxColumn();
+            PromoName = new DataGridViewTextBoxColumn();
+            Discount = new DataGridViewTextBoxColumn();
+            StartTime = new DataGridViewTextBoxColumn();
+            EndTime = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -602,9 +613,9 @@
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             groupBox2.Controls.Add(dataGridView1);
             groupBox2.Font = new Font("Segoe UI", 12F);
-            groupBox2.Location = new Point(42, 521);
+            groupBox2.Location = new Point(1, 521);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(1475, 346);
+            groupBox2.Size = new Size(1652, 346);
             groupBox2.TabIndex = 67;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
@@ -618,14 +629,14 @@
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idproduct, Colorname, IdCPU, NameCpu, ManuFactu, IdProductdetal, IdColor, Storage, Price, IdPromotion, WarrantyPe, Inventory, ImeiNumber, PromoName, Discount, StartTime, EndTime });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -654,56 +665,133 @@
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
             dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1469, 313);
+            dataGridView1.Size = new Size(1646, 313);
             dataGridView1.TabIndex = 1;
             // 
-            // EmployeeId
+            // idproduct
             // 
-            EmployeeId.HeaderText = "Employee Id";
-            EmployeeId.MinimumWidth = 6;
-            EmployeeId.Name = "EmployeeId";
-            EmployeeId.ReadOnly = true;
+            idproduct.HeaderText = "Id product";
+            idproduct.MinimumWidth = 6;
+            idproduct.Name = "idproduct";
+            idproduct.ReadOnly = true;
             // 
-            // Username
+            // Colorname
             // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
-            Username.ReadOnly = true;
+            Colorname.HeaderText = "ColorName";
+            Colorname.MinimumWidth = 6;
+            Colorname.Name = "Colorname";
+            Colorname.ReadOnly = true;
             // 
-            // Password
+            // IdCPU
             // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
+            IdCPU.HeaderText = "IdCpu";
+            IdCPU.MinimumWidth = 6;
+            IdCPU.Name = "IdCPU";
+            IdCPU.ReadOnly = true;
             // 
-            // name
+            // NameCpu
             // 
-            name.HeaderText = "Employee name";
-            name.MinimumWidth = 6;
-            name.Name = "name";
-            name.ReadOnly = true;
+            NameCpu.HeaderText = "NameCpu";
+            NameCpu.MinimumWidth = 6;
+            NameCpu.Name = "NameCpu";
+            NameCpu.ReadOnly = true;
             // 
-            // HomeTown
+            // ManuFactu
             // 
-            HomeTown.HeaderText = "hometown";
-            HomeTown.MinimumWidth = 6;
-            HomeTown.Name = "HomeTown";
-            HomeTown.ReadOnly = true;
+            ManuFactu.HeaderText = "ManuFactu";
+            ManuFactu.MinimumWidth = 6;
+            ManuFactu.Name = "ManuFactu";
+            ManuFactu.ReadOnly = true;
             // 
-            // Email
+            // IdProductdetal
             // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
+            IdProductdetal.HeaderText = "IdProDetail";
+            IdProductdetal.MinimumWidth = 6;
+            IdProductdetal.Name = "IdProductdetal";
+            IdProductdetal.ReadOnly = true;
+            // 
+            // IdColor
+            // 
+            IdColor.HeaderText = "IdColor";
+            IdColor.MinimumWidth = 6;
+            IdColor.Name = "IdColor";
+            IdColor.ReadOnly = true;
+            // 
+            // Storage
+            // 
+            Storage.HeaderText = "Storage";
+            Storage.MinimumWidth = 6;
+            Storage.Name = "Storage";
+            Storage.ReadOnly = true;
+            // 
+            // Price
+            // 
+            Price.HeaderText = "Price";
+            Price.MinimumWidth = 6;
+            Price.Name = "Price";
+            Price.ReadOnly = true;
+            // 
+            // IdPromotion
+            // 
+            IdPromotion.HeaderText = "IdPromotion";
+            IdPromotion.MinimumWidth = 6;
+            IdPromotion.Name = "IdPromotion";
+            IdPromotion.ReadOnly = true;
+            // 
+            // WarrantyPe
+            // 
+            WarrantyPe.HeaderText = "WarrantyPe";
+            WarrantyPe.MinimumWidth = 6;
+            WarrantyPe.Name = "WarrantyPe";
+            WarrantyPe.ReadOnly = true;
+            // 
+            // Inventory
+            // 
+            Inventory.HeaderText = "Inventory";
+            Inventory.MinimumWidth = 6;
+            Inventory.Name = "Inventory";
+            Inventory.ReadOnly = true;
+            // 
+            // ImeiNumber
+            // 
+            ImeiNumber.HeaderText = "ImeiNumber";
+            ImeiNumber.MinimumWidth = 6;
+            ImeiNumber.Name = "ImeiNumber";
+            ImeiNumber.ReadOnly = true;
+            // 
+            // PromoName
+            // 
+            PromoName.HeaderText = "PromoName";
+            PromoName.MinimumWidth = 6;
+            PromoName.Name = "PromoName";
+            PromoName.ReadOnly = true;
+            // 
+            // Discount
+            // 
+            Discount.HeaderText = "Discount";
+            Discount.MinimumWidth = 6;
+            Discount.Name = "Discount";
+            Discount.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            StartTime.HeaderText = "StartTime";
+            StartTime.MinimumWidth = 6;
+            StartTime.Name = "StartTime";
+            StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            EndTime.HeaderText = "EndTime";
+            EndTime.MinimumWidth = 6;
+            EndTime.Name = "EndTime";
+            EndTime.ReadOnly = true;
             // 
             // ProductDeltailForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1548, 934);
+            ClientSize = new Size(1665, 934);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "ProductDeltailForm";
@@ -761,13 +849,24 @@
         private TextBox textBox2;
         private GroupBox groupBox2;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn EmployeeId;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn HomeTown;
-        private DataGridViewTextBoxColumn Email;
         private ComboBox comboBox4;
         private ComboBox comboBox2;
+        private DataGridViewTextBoxColumn idproduct;
+        private DataGridViewTextBoxColumn Colorname;
+        private DataGridViewTextBoxColumn IdCPU;
+        private DataGridViewTextBoxColumn NameCpu;
+        private DataGridViewTextBoxColumn ManuFactu;
+        private DataGridViewTextBoxColumn IdProductdetal;
+        private DataGridViewTextBoxColumn IdColor;
+        private DataGridViewTextBoxColumn Storage;
+        private DataGridViewTextBoxColumn Price;
+        private DataGridViewTextBoxColumn IdPromotion;
+        private DataGridViewTextBoxColumn WarrantyPe;
+        private DataGridViewTextBoxColumn Inventory;
+        private DataGridViewTextBoxColumn ImeiNumber;
+        private DataGridViewTextBoxColumn PromoName;
+        private DataGridViewTextBoxColumn Discount;
+        private DataGridViewTextBoxColumn StartTime;
+        private DataGridViewTextBoxColumn EndTime;
     }
 }
