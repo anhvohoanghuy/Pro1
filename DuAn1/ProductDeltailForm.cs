@@ -51,17 +51,14 @@ namespace DuAn1
                 return "Inventory phải là số nguyên";
             return null;
         }
-        public void LoadCbbWhenTextChange(ComboBox currentCbb, List<string> originList)
+        public void LoadCbbWhenDropDown(ComboBox currentCbb, List<string> originList)
         {
-            int cursorPosition = currentCbb.SelectionStart;
+            currentCbb.Items.Clear();
             var text = currentCbb.Text;
             foreach (var item in originList.Where(c => c.Contains(text)))
             {
                 currentCbb.Items.Add(item);
             }
-            currentCbb.DroppedDown = true;
-            currentCbb.SelectionStart = cursorPosition;
-            currentCbb.SelectionLength = 0;
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -133,29 +130,29 @@ namespace DuAn1
                 MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
         }
 
-        private void cbbIdProduct_TextChanged(object sender, EventArgs e)
+        private void cbbIdProduct_DropDown(object sender, EventArgs e)
         {
-            LoadCbbWhenTextChange(cbbIdProduct, productBUS.GetAllIDProduct());
+            LoadCbbWhenDropDown(cbbIdProduct, productBUS.GetAllIDProduct());
         }
 
-        private void cbbIdCpu_TextChanged(object sender, EventArgs e)
+        private void cbbIdCpu_DropDown(object sender, EventArgs e)
         {
-            LoadCbbWhenTextChange(cbbIdCpu, cpuBUS.GetAllIDCpu());
+            LoadCbbWhenDropDown(cbbIdCpu, cpuBUS.GetAllIDCpu());
         }
 
-        private void cbbIdColor_TextChanged(object sender, EventArgs e)
+        private void cbbIdColor_DropDown(object sender, EventArgs e)
         {
-            LoadCbbWhenTextChange(cbbIdColor, colorBUS.GetAllIdColor());
+            LoadCbbWhenDropDown(cbbIdColor, colorBUS.GetAllIdColor());
         }
 
-        private void cbbIdPromotion_TextChanged(object sender, EventArgs e)
+        private void cbbIdPromotion_DropDown(object sender, EventArgs e)
         {
-            LoadCbbWhenTextChange(cbbIdPromotion, promotionBUS.GetAllIdPromotion());
+            LoadCbbWhenDropDown(cbbIdPromotion, promotionBUS.GetAllIdPromotion());
         }
 
-        private void cbbIdAccount_TextChanged(object sender, EventArgs e)
+        private void cbbIdAccount_DropDown(object sender, EventArgs e)
         {
-            LoadCbbWhenTextChange(cbbIdAccount, accountBUS.GetAllIDAccount());
+            LoadCbbWhenDropDown(cbbIdAccount, accountBUS.GetAllIDAccount());
         }
     }
 }

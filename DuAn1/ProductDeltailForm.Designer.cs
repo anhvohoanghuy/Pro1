@@ -157,7 +157,7 @@
             cbbIdAccount.Name = "cbbIdAccount";
             cbbIdAccount.Size = new Size(168, 28);
             cbbIdAccount.TabIndex = 151;
-            cbbIdAccount.TextChanged += cbbIdAccount_TextChanged;
+            cbbIdAccount.DropDown += cbbIdAccount_DropDown;
             // 
             // label1
             // 
@@ -177,7 +177,7 @@
             cbbIdPromotion.Name = "cbbIdPromotion";
             cbbIdPromotion.Size = new Size(168, 28);
             cbbIdPromotion.TabIndex = 148;
-            cbbIdPromotion.TextChanged += cbbIdPromotion_TextChanged;
+            cbbIdPromotion.DropDown += cbbIdPromotion_DropDown;
             // 
             // cbbIdColor
             // 
@@ -186,7 +186,7 @@
             cbbIdColor.Name = "cbbIdColor";
             cbbIdColor.Size = new Size(168, 28);
             cbbIdColor.TabIndex = 147;
-            cbbIdColor.TextChanged += cbbIdColor_TextChanged;
+            cbbIdColor.DropDown += cbbIdColor_DropDown;
             // 
             // label2
             // 
@@ -215,7 +215,7 @@
             cbbIdCpu.Name = "cbbIdCpu";
             cbbIdCpu.Size = new Size(168, 28);
             cbbIdCpu.TabIndex = 142;
-            cbbIdCpu.TextChanged += cbbIdCpu_TextChanged;
+            cbbIdCpu.DropDown += cbbIdCpu_DropDown;
             // 
             // cbbIdProduct
             // 
@@ -224,7 +224,7 @@
             cbbIdProduct.Name = "cbbIdProduct";
             cbbIdProduct.Size = new Size(168, 28);
             cbbIdProduct.TabIndex = 140;
-            cbbIdProduct.TextChanged += cbbIdProduct_TextChanged;
+            cbbIdProduct.DropDown += cbbIdProduct_DropDown;
             // 
             // btnExcel
             // 
@@ -718,7 +718,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1435, 934);
+            ClientSize = new Size(1555, 934);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "ProductDeltailForm";

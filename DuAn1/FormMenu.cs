@@ -19,7 +19,7 @@ namespace DuAn1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule;objKeyboardProcess = new LowLevelKeyboardProc(captureKey);ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
+            this.FormBorderStyle = FormBorderStyle.None; ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule; objKeyboardProcess = new LowLevelKeyboardProc(captureKey); ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace DuAn1
 
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-             e.Cancel = (e.CloseReason == CloseReason.UserClosing);
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing);
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -119,6 +119,11 @@ namespace DuAn1
             NhanVienForm a = new NhanVienForm();
             LoadForm(a);
             ActiveColor(btnEmployee);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

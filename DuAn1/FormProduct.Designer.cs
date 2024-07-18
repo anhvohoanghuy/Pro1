@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel2 = new Panel();
+            txtProductID = new TextBox();
             groupBox3 = new GroupBox();
             rdoUnActivated = new RadioButton();
             rdoActivated = new RadioButton();
             cbbIDCPU = new ComboBox();
             cbbIDAccount = new ComboBox();
             cbbIDCompany = new ComboBox();
-            cbbIDProduct = new ComboBox();
             btnProductDetail = new CustomButton.VBButton();
             btnExcel = new CustomButton.VBButton();
             vbButton2 = new CustomButton.VBButton();
@@ -69,29 +69,23 @@
             label50 = new Label();
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            EmployeeId = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            HomeTown = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
+            dgvListProduct = new DataGridView();
             panel2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListProduct).BeginInit();
             SuspendLayout();
             // 
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Left;
             panel2.BackColor = SystemColors.Control;
+            panel2.Controls.Add(txtProductID);
             panel2.Controls.Add(groupBox3);
             panel2.Controls.Add(cbbIDCPU);
             panel2.Controls.Add(cbbIDAccount);
             panel2.Controls.Add(cbbIDCompany);
-            panel2.Controls.Add(cbbIDProduct);
             panel2.Controls.Add(btnProductDetail);
             panel2.Controls.Add(btnExcel);
             panel2.Controls.Add(vbButton2);
@@ -123,6 +117,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1427, 373);
             panel2.TabIndex = 63;
+            // 
+            // txtProductID
+            // 
+            txtProductID.Anchor = AnchorStyles.Left;
+            txtProductID.Location = new Point(16, 45);
+            txtProductID.Name = "txtProductID";
+            txtProductID.Size = new Size(172, 27);
+            txtProductID.TabIndex = 89;
             // 
             // groupBox3
             // 
@@ -166,7 +168,7 @@
             cbbIDCPU.Name = "cbbIDCPU";
             cbbIDCPU.Size = new Size(172, 28);
             cbbIDCPU.TabIndex = 87;
-            cbbIDCPU.TextUpdate += cbbIDCPU_TextUpdate;
+            cbbIDCPU.DropDown += cbbIDCPU_DropDown;
             // 
             // cbbIDAccount
             // 
@@ -175,7 +177,7 @@
             cbbIDAccount.Name = "cbbIDAccount";
             cbbIDAccount.Size = new Size(172, 28);
             cbbIDAccount.TabIndex = 86;
-            cbbIDAccount.TextChanged += cbbIDAccount_TextChanged;
+            cbbIDAccount.DropDown += cbbIDAccount_DropDown;
             // 
             // cbbIDCompany
             // 
@@ -184,16 +186,7 @@
             cbbIDCompany.Name = "cbbIDCompany";
             cbbIDCompany.Size = new Size(172, 28);
             cbbIDCompany.TabIndex = 85;
-            cbbIDCompany.TextChanged += cbbIDCompany_TextChanged;
-            // 
-            // cbbIDProduct
-            // 
-            cbbIDProduct.FormattingEnabled = true;
-            cbbIDProduct.Location = new Point(16, 35);
-            cbbIDProduct.Name = "cbbIDProduct";
-            cbbIDProduct.Size = new Size(172, 28);
-            cbbIDProduct.TabIndex = 84;
-            cbbIDProduct.TextChanged += cbbIDProduct_TextChanged;
+            cbbIDCompany.DropDown += cbbIDCompany_DropDown;
             // 
             // btnProductDetail
             // 
@@ -252,6 +245,7 @@
             vbButton2.TabIndex = 78;
             vbButton2.TextColor = Color.White;
             vbButton2.UseVisualStyleBackColor = false;
+            vbButton2.Click += vbButton2_Click;
             // 
             // btnSua
             // 
@@ -532,7 +526,7 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(dgvListProduct);
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(36, 474);
             groupBox2.Name = "groupBox2";
@@ -541,95 +535,53 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
             // 
-            // dataGridView1
+            // dgvListProduct
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = Color.MediumSlateBlue;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 12F);
-            dataGridViewCellStyle13.ForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle14.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle14.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.GridColor = Color.MediumSlateBlue;
-            dataGridView1.Location = new Point(3, 30);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = SystemColors.Control;
-            dataGridViewCellStyle15.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle15.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridViewCellStyle16.ForeColor = Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = SystemColors.HighlightText;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1469, 235);
-            dataGridView1.TabIndex = 1;
-            // 
-            // EmployeeId
-            // 
-            EmployeeId.HeaderText = "Employee Id";
-            EmployeeId.MinimumWidth = 6;
-            EmployeeId.Name = "EmployeeId";
-            EmployeeId.ReadOnly = true;
-            // 
-            // Username
-            // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
-            Username.ReadOnly = true;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            // 
-            // name
-            // 
-            name.HeaderText = "Employee name";
-            name.MinimumWidth = 6;
-            name.Name = "name";
-            name.ReadOnly = true;
-            // 
-            // HomeTown
-            // 
-            HomeTown.HeaderText = "hometown";
-            HomeTown.MinimumWidth = 6;
-            HomeTown.Name = "HomeTown";
-            HomeTown.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
+            dgvListProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvListProduct.BackgroundColor = SystemColors.ButtonFace;
+            dgvListProduct.BorderStyle = BorderStyle.None;
+            dgvListProduct.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dgvListProduct.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvListProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvListProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvListProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvListProduct.Dock = DockStyle.Fill;
+            dgvListProduct.EnableHeadersVisualStyles = false;
+            dgvListProduct.GridColor = Color.MediumSlateBlue;
+            dgvListProduct.Location = new Point(3, 30);
+            dgvListProduct.Name = "dgvListProduct";
+            dgvListProduct.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvListProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvListProduct.RowHeadersVisible = false;
+            dgvListProduct.RowHeadersWidth = 62;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
+            dgvListProduct.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvListProduct.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvListProduct.Size = new Size(1469, 235);
+            dgvListProduct.TabIndex = 1;
+            dgvListProduct.CellClick += dgvListProduct_CellClick;
             // 
             // FormProduct
             // 
@@ -648,7 +600,7 @@
             groupBox3.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvListProduct).EndInit();
             ResumeLayout(false);
         }
 
@@ -683,20 +635,14 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private CustomButton.VBButton btnExcel;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn EmployeeId;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn HomeTown;
-        private DataGridViewTextBoxColumn Email;
+        private DataGridView dgvListProduct;
         private CustomButton.VBButton btnProductDetail;
         private ComboBox cbbIDAccount;
         private ComboBox cbbIDCompany;
-        private ComboBox cbbIDProduct;
         private ComboBox cbbIDCPU;
         private GroupBox groupBox3;
         private RadioButton rdoActivated;
         private RadioButton rdoUnActivated;
+        private TextBox txtProductID;
     }
 }

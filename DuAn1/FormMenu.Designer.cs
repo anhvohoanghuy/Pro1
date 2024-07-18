@@ -180,6 +180,7 @@
             btnLogOut.TextColor = Color.White;
             btnLogOut.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLogOut.UseVisualStyleBackColor = false;
+            btnLogOut.Click += btnLogOut_Click;
             // 
             // btnStatistics
             // 

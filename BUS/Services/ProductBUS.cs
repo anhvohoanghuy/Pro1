@@ -23,6 +23,13 @@ namespace BUS.Services
         {
             return productDAL.GetAllProduct().FirstOrDefault(c => c.Idproduct == id);
         }
+        public bool CheckProductIfExist(string idProduct)
+        {
+            var check= GetProductByID(idProduct);
+            if (check != null)
+                return false;
+            return true;
+        }
         public bool AddNewProduct(string idProduct, string productImage, string productName, string idCompany, int ram,string idCPU, double screenSize, string screenResolution, int refeshRate, double cameraResolution,int pin, string idAccount,bool productStatus)
         {
             Product product = new Product()
