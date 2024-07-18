@@ -77,6 +77,10 @@
             name = new DataGridViewTextBoxColumn();
             HomeTown = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
+            label2 = new Label();
+            comboBox2 = new ComboBox();
             panel2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -87,6 +91,10 @@
             // 
             panel2.Anchor = AnchorStyles.Left;
             panel2.BackColor = SystemColors.Control;
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(comboBox2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(comboBox1);
             panel2.Controls.Add(btnProductDetail);
             panel2.Controls.Add(radioButton1);
             panel2.Controls.Add(btnExcel);
@@ -151,7 +159,7 @@
             // 
             radioButton1.AutoSize = true;
             radioButton1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            radioButton1.Location = new Point(993, 123);
+            radioButton1.Location = new Point(1217, 35);
             radioButton1.Name = "radioButton1";
             radioButton1.Size = new Size(143, 29);
             radioButton1.TabIndex = 82;
@@ -644,6 +652,44 @@
             Email.Name = "Email";
             Email.ReadOnly = true;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(1001, 132);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(172, 28);
+            comboBox1.TabIndex = 84;
+            // 
+            // label1
+            // 
+            label1.Anchor = AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11F);
+            label1.Location = new Point(1001, 104);
+            label1.Name = "label1";
+            label1.Size = new Size(58, 25);
+            label1.TabIndex = 85;
+            label1.Text = "Color";
+            // 
+            // label2
+            // 
+            label2.Anchor = AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 11F);
+            label2.Location = new Point(1001, 181);
+            label2.Name = "label2";
+            label2.Size = new Size(76, 25);
+            label2.TabIndex = 87;
+            label2.Text = "Storage";
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(1001, 209);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(172, 28);
+            comboBox2.TabIndex = 86;
+            // 
             // FormProduct
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -710,5 +756,9 @@
         private DataGridViewTextBoxColumn HomeTown;
         private DataGridViewTextBoxColumn Email;
         private CustomButton.VBButton btnProductDetail;
+        private Label label2;
+        private ComboBox comboBox2;
+        private Label label1;
+        private ComboBox comboBox1;
     }
 }

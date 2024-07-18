@@ -72,6 +72,7 @@ namespace DuAn1
             txtPass.BackColor = Color.WhiteSmoke;
             txtPass.Location = new Point(706, 280);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.Size = new Size(244, 27);
             txtPass.TabIndex = 3;
             // 
@@ -102,6 +103,7 @@ namespace DuAn1
             cbViewPass.TabIndex = 6;
             cbViewPass.Text = "Hiển thị mật khẩu";
             cbViewPass.UseVisualStyleBackColor = true;
+            cbViewPass.CheckedChanged += cbViewPass_CheckedChanged;
             // 
             // btnLogin
             // 
@@ -120,12 +122,13 @@ namespace DuAn1
             btnLogin.Text = "Login";
             btnLogin.TextColor = Color.White;
             btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // DangNhapForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1024, 499);
+            ClientSize = new Size(1024, 522);
             Controls.Add(btnLogin);
             Controls.Add(cbViewPass);
             Controls.Add(label3);
@@ -136,6 +139,7 @@ namespace DuAn1
             Controls.Add(label1);
             Name = "DangNhapForm";
             Text = "DangNhapForm";
+            Load += DangNhapForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

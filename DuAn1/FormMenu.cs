@@ -19,12 +19,23 @@ namespace DuAn1
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule;objKeyboardProcess = new LowLevelKeyboardProc(captureKey);ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
+             this.FormBorderStyle = FormBorderStyle.None;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule;objKeyboardProcess = new LowLevelKeyboardProc(captureKey);ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
         {
             lblDateTime.Text = GetTimeNow();
+            lblUserName.Text = DangNhapForm.GetDataUser.acccountname;
+            lblPhanQuyen.Text = DangNhapForm.GetDataUser.accountlevel == 1 ? "Nhân Viên" :
+                    DangNhapForm.GetDataUser.accountlevel == 2 ? "Admin" : "Không xác định";
+
+            if (lblPhanQuyen.Text == "Nhân Viên")
+            {
+                btnEmployee.Visible = false;
+                btnStatistics.Visible = false;
+            }
+            ButtonNow = vbButton1;
+            ButtonNow.ForeColor = Color.DarkGreen;
         }
         static string GetTimeNow()
         {
@@ -104,14 +115,11 @@ namespace DuAn1
             FormVoucher a = new FormVoucher();
             LoadForm(a);
             ActiveColor(btnVoucher);
-        }
-        [StructLayout(LayoutKind.Sequential)] private struct KBDLLHOOKSTRUCT { public Keys key; public int scanCode; public int flags; public int time; public IntPtr extra; }
-        private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr SetWindowsHookEx(int id, LowLevelKeyboardProc callback, IntPtr hMod, uint dwThreadId); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern bool UnhookWindowsHookEx(IntPtr hook); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr CallNextHookEx(IntPtr hook, int nCode, IntPtr wp, IntPtr lp); [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr GetModuleHandle(string name); [DllImport("user32.dll", CharSet = CharSet.Auto)] private static extern short GetAsyncKeyState(Keys key); private IntPtr ptrHook; private LowLevelKeyboardProc objKeyboardProcess; private IntPtr captureKey(int nCode, IntPtr wp, IntPtr lp) { if (nCode >= 0) { KBDLLHOOKSTRUCT objKeyInfo = (KBDLLHOOKSTRUCT)Marshal.PtrToStructure(lp, typeof(KBDLLHOOKSTRUCT)); if (objKeyInfo.key == Keys.RWin || objKeyInfo.key == Keys.LWin || (objKeyInfo.key >= Keys.F1 && objKeyInfo.key <= Keys.F12) || objKeyInfo.key == Keys.RControlKey || objKeyInfo.key == Keys.LControlKey || objKeyInfo.key == Keys.Escape || objKeyInfo.key == Keys.Tab && HasAltModifier(objKeyInfo.flags) || objKeyInfo.key == Keys.Escape && (ModifierKeys & Keys.Control) == Keys.Control) { return (IntPtr)1; } } return CallNextHookEx(ptrHook, nCode, wp, lp); }
-        bool HasAltModifier(int flags) { return (flags & 0x20) == 0x20; }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               [StructLayout(LayoutKind.Sequential)] private struct KBDLLHOOKSTRUCT { public Keys key; public int scanCode; public int flags; public int time; public IntPtr extra; }private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr SetWindowsHookEx(int id, LowLevelKeyboardProc callback, IntPtr hMod, uint dwThreadId); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern bool UnhookWindowsHookEx(IntPtr hook); [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr CallNextHookEx(IntPtr hook, int nCode, IntPtr wp, IntPtr lp); [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)] private static extern IntPtr GetModuleHandle(string name); [DllImport("user32.dll", CharSet = CharSet.Auto)] private static extern short GetAsyncKeyState(Keys key); private IntPtr ptrHook; private LowLevelKeyboardProc objKeyboardProcess; private IntPtr captureKey(int nCode, IntPtr wp, IntPtr lp) { if (nCode >= 0) { KBDLLHOOKSTRUCT objKeyInfo = (KBDLLHOOKSTRUCT)Marshal.PtrToStructure(lp, typeof(KBDLLHOOKSTRUCT)); if (objKeyInfo.key == Keys.RWin || objKeyInfo.key == Keys.LWin || (objKeyInfo.key >= Keys.F1 && objKeyInfo.key <= Keys.F12) || objKeyInfo.key == Keys.RControlKey || objKeyInfo.key == Keys.LControlKey || objKeyInfo.key == Keys.Escape || objKeyInfo.key == Keys.Tab && HasAltModifier(objKeyInfo.flags) || objKeyInfo.key == Keys.Escape && (ModifierKeys & Keys.Control) == Keys.Control) { return (IntPtr)1; } } return CallNextHookEx(ptrHook, nCode, wp, lp); }bool HasAltModifier(int flags) { return (flags & 0x20) == 0x20; }
 
         private void FormMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-             e.Cancel = (e.CloseReason == CloseReason.UserClosing);
+            // e.Cancel = (e.CloseReason == CloseReason.UserClosing);
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -119,6 +127,17 @@ namespace DuAn1
             NhanVienForm a = new NhanVienForm();
             LoadForm(a);
             ActiveColor(btnEmployee);
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+           /* DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất tài khoản không  ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                DangNhapForm a = new DangNhapForm();
+                a.ShowDialog();
+            }*/
         }
     }
 }

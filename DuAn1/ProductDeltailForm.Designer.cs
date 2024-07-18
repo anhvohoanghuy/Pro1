@@ -708,6 +708,7 @@
             Controls.Add(groupBox1);
             Name = "ProductDeltailForm";
             Text = "ProductDeltailForm";
+            Load += ProductDeltailForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
