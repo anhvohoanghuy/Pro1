@@ -105,3 +105,4 @@ D:\clone\Pro1\DuAn1\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.TaiKhoanForm.resources
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.CreateOrderForm.resources
 D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.ChiTietDonHangForm.resources
+D:\clone\Pro1\DuAn1\obj\Debug\net8.0-windows\DuAn1.ThongkeForm.resources
