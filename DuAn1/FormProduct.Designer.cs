@@ -33,12 +33,12 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             panel2 = new Panel();
+            txtIdAccount = new TextBox();
             txtProductID = new TextBox();
             groupBox3 = new GroupBox();
             rdoUnActivated = new RadioButton();
             rdoActivated = new RadioButton();
             cbbIDCPU = new ComboBox();
-            cbbIDAccount = new ComboBox();
             cbbIDCompany = new ComboBox();
             btnProductDetail = new CustomButton.VBButton();
             btnExcel = new CustomButton.VBButton();
@@ -46,7 +46,7 @@
             btnSua = new CustomButton.VBButton();
             btnThem = new CustomButton.VBButton();
             vbButton1 = new CustomButton.VBButton();
-            textBox7 = new TextBox();
+            txtTimKiem = new TextBox();
             label36 = new Label();
             label38 = new Label();
             txtPin = new TextBox();
@@ -81,10 +81,10 @@
             // 
             panel2.Anchor = AnchorStyles.Left;
             panel2.BackColor = SystemColors.Control;
+            panel2.Controls.Add(txtIdAccount);
             panel2.Controls.Add(txtProductID);
             panel2.Controls.Add(groupBox3);
             panel2.Controls.Add(cbbIDCPU);
-            panel2.Controls.Add(cbbIDAccount);
             panel2.Controls.Add(cbbIDCompany);
             panel2.Controls.Add(btnProductDetail);
             panel2.Controls.Add(btnExcel);
@@ -92,7 +92,7 @@
             panel2.Controls.Add(btnSua);
             panel2.Controls.Add(btnThem);
             panel2.Controls.Add(vbButton1);
-            panel2.Controls.Add(textBox7);
+            panel2.Controls.Add(txtTimKiem);
             panel2.Controls.Add(label36);
             panel2.Controls.Add(label38);
             panel2.Controls.Add(txtPin);
@@ -117,6 +117,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1427, 373);
             panel2.TabIndex = 63;
+            // 
+            // txtIdAccount
+            // 
+            txtIdAccount.Anchor = AnchorStyles.Left;
+            txtIdAccount.Location = new Point(488, 127);
+            txtIdAccount.Name = "txtIdAccount";
+            txtIdAccount.Size = new Size(172, 27);
+            txtIdAccount.TabIndex = 90;
             // 
             // txtProductID
             // 
@@ -169,15 +177,6 @@
             cbbIDCPU.Size = new Size(172, 28);
             cbbIDCPU.TabIndex = 87;
             cbbIDCPU.DropDown += cbbIDCPU_DropDown;
-            // 
-            // cbbIDAccount
-            // 
-            cbbIDAccount.FormattingEnabled = true;
-            cbbIDAccount.Location = new Point(488, 126);
-            cbbIDAccount.Name = "cbbIDAccount";
-            cbbIDAccount.Size = new Size(172, 28);
-            cbbIDAccount.TabIndex = 86;
-            cbbIDAccount.DropDown += cbbIDAccount_DropDown;
             // 
             // cbbIDCompany
             // 
@@ -305,18 +304,19 @@
             vbButton1.TabIndex = 74;
             vbButton1.TextColor = Color.White;
             vbButton1.UseVisualStyleBackColor = false;
+            vbButton1.Click += vbButton1_Click;
             // 
-            // textBox7
+            // txtTimKiem
             // 
-            textBox7.Anchor = AnchorStyles.Left;
-            textBox7.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox7.ForeColor = Color.Gray;
-            textBox7.Location = new Point(34, 316);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(403, 36);
-            textBox7.TabIndex = 73;
-            textBox7.Text = "Tìm kiếm";
+            txtTimKiem.Anchor = AnchorStyles.Left;
+            txtTimKiem.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTimKiem.ForeColor = Color.Gray;
+            txtTimKiem.Location = new Point(34, 316);
+            txtTimKiem.Multiline = true;
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new Size(403, 36);
+            txtTimKiem.TabIndex = 73;
+            txtTimKiem.Text = "Tìm kiếm";
             // 
             // label36
             // 
@@ -611,7 +611,7 @@
         private CustomButton.VBButton btnSua;
         private CustomButton.VBButton btnThem;
         private CustomButton.VBButton vbButton1;
-        private TextBox textBox7;
+        private TextBox txtTimKiem;
         private Label label36;
         private Label label38;
         private TextBox txtPin;
@@ -637,12 +637,12 @@
         private CustomButton.VBButton btnExcel;
         private DataGridView dgvListProduct;
         private CustomButton.VBButton btnProductDetail;
-        private ComboBox cbbIDAccount;
         private ComboBox cbbIDCompany;
         private ComboBox cbbIDCPU;
         private GroupBox groupBox3;
         private RadioButton rdoActivated;
         private RadioButton rdoUnActivated;
         private TextBox txtProductID;
+        private TextBox txtIdAccount;
     }
 }

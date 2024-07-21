@@ -57,5 +57,9 @@ namespace BUS.Services
             else
                 return false;
         }
+        public Promotion GetPromotionById(string idPromotion) 
+        {
+            return GetAllPromotion().FirstOrDefault(c=>c.Idpromotion==idPromotion);
+        }
     }
 }

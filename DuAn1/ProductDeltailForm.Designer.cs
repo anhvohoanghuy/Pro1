@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TextBox txtNameCpu;
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             groupBox1 = new GroupBox();
-            cbbIdAccount = new ComboBox();
+            txtNameCpu = new TextBox();
+            txtIdAccount = new TextBox();
             label1 = new Label();
             cbbIdPromotion = new ComboBox();
             cbbIdColor = new ComboBox();
@@ -77,31 +77,16 @@
             label45 = new Label();
             label50 = new Label();
             groupBox2 = new GroupBox();
-            dataGridView1 = new DataGridView();
-            EmployeeId = new DataGridViewTextBoxColumn();
-            Username = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
-            name = new DataGridViewTextBoxColumn();
-            HomeTown = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            txtNameCpu = new TextBox();
+            dgvProductDetail = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductDetail).BeginInit();
             SuspendLayout();
-            // 
-            // txtNameCpu
-            // 
-            txtNameCpu.Anchor = AnchorStyles.Left;
-            txtNameCpu.Location = new Point(17, 190);
-            txtNameCpu.Name = "txtNameCpu";
-            txtNameCpu.ReadOnly = true;
-            txtNameCpu.Size = new Size(172, 27);
-            txtNameCpu.TabIndex = 95;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(cbbIdAccount);
+            groupBox1.Controls.Add(txtNameCpu);
+            groupBox1.Controls.Add(txtIdAccount);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(cbbIdPromotion);
             groupBox1.Controls.Add(cbbIdColor);
@@ -141,7 +126,6 @@
             groupBox1.Controls.Add(label43);
             groupBox1.Controls.Add(txtManufacturer);
             groupBox1.Controls.Add(label44);
-            groupBox1.Controls.Add(txtNameCpu);
             groupBox1.Controls.Add(label45);
             groupBox1.Controls.Add(label50);
             groupBox1.Location = new Point(69, 27);
@@ -150,14 +134,22 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             // 
-            // cbbIdAccount
+            // txtNameCpu
             // 
-            cbbIdAccount.FormattingEnabled = true;
-            cbbIdAccount.Location = new Point(685, 304);
-            cbbIdAccount.Name = "cbbIdAccount";
-            cbbIdAccount.Size = new Size(168, 28);
-            cbbIdAccount.TabIndex = 151;
-            cbbIdAccount.DropDown += cbbIdAccount_DropDown;
+            txtNameCpu.Location = new Point(15, 194);
+            txtNameCpu.Name = "txtNameCpu";
+            txtNameCpu.ReadOnly = true;
+            txtNameCpu.Size = new Size(174, 27);
+            txtNameCpu.TabIndex = 152;
+            // 
+            // txtIdAccount
+            // 
+            txtIdAccount.Anchor = AnchorStyles.Left;
+            txtIdAccount.Location = new Point(681, 301);
+            txtIdAccount.Name = "txtIdAccount";
+            txtIdAccount.ReadOnly = true;
+            txtIdAccount.Size = new Size(172, 27);
+            txtIdAccount.TabIndex = 151;
             // 
             // label1
             // 
@@ -178,6 +170,7 @@
             cbbIdPromotion.Size = new Size(168, 28);
             cbbIdPromotion.TabIndex = 148;
             cbbIdPromotion.DropDown += cbbIdPromotion_DropDown;
+            cbbIdPromotion.Leave += cbbIdPromotion_Leave;
             // 
             // cbbIdColor
             // 
@@ -187,6 +180,7 @@
             cbbIdColor.Size = new Size(168, 28);
             cbbIdColor.TabIndex = 147;
             cbbIdColor.DropDown += cbbIdColor_DropDown;
+            cbbIdColor.Leave += cbbIdColor_Leave;
             // 
             // label2
             // 
@@ -216,13 +210,14 @@
             cbbIdCpu.Size = new Size(168, 28);
             cbbIdCpu.TabIndex = 142;
             cbbIdCpu.DropDown += cbbIdCpu_DropDown;
+            cbbIdCpu.Leave += cbbIdCpu_Leave;
             // 
             // cbbIdProduct
             // 
             cbbIdProduct.FormattingEnabled = true;
             cbbIdProduct.Location = new Point(17, 69);
             cbbIdProduct.Name = "cbbIdProduct";
-            cbbIdProduct.Size = new Size(168, 28);
+            cbbIdProduct.Size = new Size(172, 28);
             cbbIdProduct.TabIndex = 140;
             cbbIdProduct.DropDown += cbbIdProduct_DropDown;
             // 
@@ -338,6 +333,7 @@
             vbButton1.TabIndex = 132;
             vbButton1.TextColor = Color.White;
             vbButton1.UseVisualStyleBackColor = false;
+            vbButton1.Click += vbButton1_Click;
             // 
             // textBox7
             // 
@@ -615,7 +611,7 @@
             // groupBox2
             // 
             groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            groupBox2.Controls.Add(dataGridView1);
+            groupBox2.Controls.Add(dgvProductDetail);
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.Location = new Point(42, 521);
             groupBox2.Name = "groupBox2";
@@ -624,13 +620,13 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách sản phẩm";
             // 
-            // dataGridView1
+            // dgvProductDetail
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = SystemColors.ButtonFace;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dgvProductDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvProductDetail.BackgroundColor = SystemColors.ButtonFace;
+            dgvProductDetail.BorderStyle = BorderStyle.None;
+            dgvProductDetail.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dgvProductDetail.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 12F);
@@ -638,9 +634,8 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { EmployeeId, Username, Password, name, HomeTown, Email });
+            dgvProductDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvProductDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
@@ -648,13 +643,13 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.GridColor = Color.MediumSlateBlue;
-            dataGridView1.Location = new Point(3, 30);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
+            dgvProductDetail.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvProductDetail.Dock = DockStyle.Fill;
+            dgvProductDetail.EnableHeadersVisualStyles = false;
+            dgvProductDetail.GridColor = Color.MediumSlateBlue;
+            dgvProductDetail.Location = new Point(3, 30);
+            dgvProductDetail.Name = "dgvProductDetail";
+            dgvProductDetail.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -662,57 +657,15 @@
             dataGridViewCellStyle3.SelectionBackColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 62;
+            dgvProductDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvProductDetail.RowHeadersVisible = false;
+            dgvProductDetail.RowHeadersWidth = 62;
             dataGridViewCellStyle4.ForeColor = Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = SystemColors.HighlightText;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(1469, 313);
-            dataGridView1.TabIndex = 1;
-            // 
-            // EmployeeId
-            // 
-            EmployeeId.HeaderText = "Employee Id";
-            EmployeeId.MinimumWidth = 6;
-            EmployeeId.Name = "EmployeeId";
-            EmployeeId.ReadOnly = true;
-            // 
-            // Username
-            // 
-            Username.HeaderText = "Username";
-            Username.MinimumWidth = 6;
-            Username.Name = "Username";
-            Username.ReadOnly = true;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            // 
-            // name
-            // 
-            name.HeaderText = "Employee name";
-            name.MinimumWidth = 6;
-            name.Name = "name";
-            name.ReadOnly = true;
-            // 
-            // HomeTown
-            // 
-            HomeTown.HeaderText = "hometown";
-            HomeTown.MinimumWidth = 6;
-            HomeTown.Name = "HomeTown";
-            HomeTown.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
+            dgvProductDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvProductDetail.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProductDetail.Size = new Size(1469, 313);
+            dgvProductDetail.TabIndex = 1;
             // 
             // ProductDeltailForm
             // 
@@ -723,10 +676,11 @@
             Controls.Add(groupBox1);
             Name = "ProductDeltailForm";
             Text = "ProductDeltailForm";
+            Load += ProductDeltailForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvProductDetail).EndInit();
             ResumeLayout(false);
         }
 
@@ -755,7 +709,6 @@
         private Label label43;
         private TextBox txtManufacturer;
         private Label label44;
-        private TextBox txtNameCpu;
         private Label label45;
         private Label label50;
         private ComboBox cbbIdCpu;
@@ -773,16 +726,11 @@
         private Label label2;
         private TextBox txtColorName;
         private GroupBox groupBox2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn EmployeeId;
-        private DataGridViewTextBoxColumn Username;
-        private DataGridViewTextBoxColumn Password;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn HomeTown;
-        private DataGridViewTextBoxColumn Email;
+        private DataGridView dgvProductDetail;
         private ComboBox cbbIdPromotion;
         private ComboBox cbbIdColor;
-        private ComboBox cbbIdAccount;
         private Label label1;
+        private TextBox txtIdAccount;
+        private TextBox txtNameCpu;
     }
 }

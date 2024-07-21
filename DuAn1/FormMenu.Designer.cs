@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             panel1 = new Panel();
+            lblPhanQuyen = new Label();
+            label2 = new Label();
             lblDateTime = new Label();
             lblUserName = new Label();
             panel6 = new Panel();
@@ -55,6 +57,8 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.MediumSlateBlue;
+            panel1.Controls.Add(lblPhanQuyen);
+            panel1.Controls.Add(label2);
             panel1.Controls.Add(lblDateTime);
             panel1.Controls.Add(lblUserName);
             panel1.Controls.Add(panel6);
@@ -63,6 +67,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(993, 62);
             panel1.TabIndex = 0;
+            // 
+            // lblPhanQuyen
+            // 
+            lblPhanQuyen.AutoSize = true;
+            lblPhanQuyen.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPhanQuyen.ForeColor = SystemColors.ButtonHighlight;
+            lblPhanQuyen.Location = new Point(384, 19);
+            lblPhanQuyen.Name = "lblPhanQuyen";
+            lblPhanQuyen.Size = new Size(41, 23);
+            lblPhanQuyen.TabIndex = 7;
+            lblPhanQuyen.Text = "Null";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(292, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(86, 23);
+            label2.TabIndex = 6;
+            label2.Text = "Chức vụ : ";
             // 
             // lblDateTime
             // 
@@ -83,17 +109,17 @@
             lblUserName.ForeColor = SystemColors.ButtonHighlight;
             lblUserName.Location = new Point(159, 19);
             lblUserName.Name = "lblUserName";
-            lblUserName.Size = new Size(56, 23);
+            lblUserName.Size = new Size(41, 23);
             lblUserName.TabIndex = 4;
-            lblUserName.Text = "Name";
+            lblUserName.Text = "Null";
             // 
             // panel6
             // 
             panel6.BackgroundImage = Properties.Resources.add_user;
             panel6.BackgroundImageLayout = ImageLayout.Stretch;
-            panel6.Location = new Point(120, 9);
+            panel6.Location = new Point(124, 12);
             panel6.Name = "panel6";
-            panel6.Size = new Size(29, 41);
+            panel6.Size = new Size(29, 38);
             panel6.TabIndex = 3;
             // 
             // panel3
@@ -221,7 +247,7 @@
             btnEmployee.Name = "btnEmployee";
             btnEmployee.Size = new Size(188, 50);
             btnEmployee.TabIndex = 18;
-            btnEmployee.Text = "Nhân viên";
+            btnEmployee.Text = "Tài khoản";
             btnEmployee.TextColor = Color.White;
             btnEmployee.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnEmployee.UseVisualStyleBackColor = false;
@@ -270,6 +296,7 @@
             btnCreateOrder.TextColor = Color.White;
             btnCreateOrder.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCreateOrder.UseVisualStyleBackColor = false;
+            btnCreateOrder.Click += btnCreateOrder_Click;
             // 
             // btnProduct
             // 
@@ -391,5 +418,7 @@
         private CustomButton.VBButton vbButton1;
         private Panel panel7;
         private CustomButton.VBButton btnVoucher;
+        private Label lblPhanQuyen;
+        private Label label2;
     }
 }

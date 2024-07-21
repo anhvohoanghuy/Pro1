@@ -123,3 +123,6 @@ D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\bin\Debug\net8.0-windows\DAL.pdb
 D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\DuAn1.csproj.Up2Date
 D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\DuAn1.genruntimeconfig.cache
 D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\ref\DuAn1.dll
+D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\DuAn1.CreateOrderForm.resources
+D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\DuAn1.TaiKhoanForm.resources
+D:\KhongPhaiWin\Pro1\DuAn1Master\DuAn1\obj\Debug\net8.0-windows\DuAn1.ChiTietDonHangForm.resources

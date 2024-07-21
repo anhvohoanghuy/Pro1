@@ -52,5 +52,9 @@ namespace BUS.Services
             else
                 return false;
         }
+        public ProductColor GetProductColorById(string id)
+        {
+            return GetAllColor().FirstOrDefault(c => c.Idcolor == id);
+        }
     }
 }

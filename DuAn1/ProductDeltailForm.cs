@@ -24,6 +24,37 @@ namespace DuAn1
         {
             InitializeComponent();
         }
+        public bool CheckCbb(params ComboBox[] cbbs)
+        {
+            foreach (ComboBox cbb in cbbs)
+            {
+                if (cbb.SelectedIndex == -1)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public void LoadDataGridView()
+        {
+            dgvProductDetail.Columns.Add("IDproduct", "ID product");
+            dgvProductDetail.Columns.Add("IdproductDetails", "Id productDetails");
+            dgvProductDetail.Columns.Add("Idcolor", "Id color");
+            dgvProductDetail.Columns.Add("Storage", "Storage");
+            dgvProductDetail.Columns.Add("Price", "Price");
+            dgvProductDetail.Columns.Add("Idpromotion", "Id promotion");
+            dgvProductDetail.Columns.Add("WarrantyPeriod", "Warranty period");
+            dgvProductDetail.Columns.Add("Inventory", "Inventory");
+            dgvProductDetail.Columns.Add("Idaccount", "Idaccount");
+        }
+        public void ShowOnDataGridView(List<ProductDetail> productDetails)
+        {
+            dgvProductDetail.Rows.Clear();
+            foreach (ProductDetail productDetail in productDetails)
+            {
+                dgvProductDetail.Rows.Add(productDetail.Idproduct, productDetail.IdproductDetails, productDetail.Idcolor, productDetail.Storage, productDetail.Price, productDetail.Idpromotion, productDetail.WarrantyPeriod, productDetail.Inventory, productDetail.Idaccount);
+            }
+        }
         public bool CheckProductDetailIfExists(string idProductDetail)
         {
             if (productDetailBUS.GetProductDetailByID(idProductDetail) != null)
@@ -41,13 +72,13 @@ namespace DuAn1
         }
         public string CheckIsNumberProductDetail(string storage, string price, string warrantyPeriod, string inventory)
         {
-            if (int.TryParse(storage, out _))
+            if (!int.TryParse(storage, out _))
                 return "Storage phải là số nguyên";
-            else if (decimal.TryParse(price, out _))
+            else if (!decimal.TryParse(price, out _))
                 return "Price phải là số";
-            else if (int.TryParse(warrantyPeriod, out _))
+            else if (!int.TryParse(warrantyPeriod, out _))
                 return "Warranty period phải là số nguyên";
-            else if (int.TryParse(inventory, out _))
+            else if (!int.TryParse(inventory, out _))
                 return "Inventory phải là số nguyên";
             return null;
         }
@@ -62,72 +93,82 @@ namespace DuAn1
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            var idProduct = cbbIdProduct.SelectedValue.ToString();
-            var idCpu = cbbIdCpu.SelectedValue.ToString();
-            var idProductDetail = txtIdProductDetail.Text;
-            var idColor = cbbIdColor.SelectedValue.ToString();
-            var storage = txtStorage.Text;
-            var price = txtPrice.Text;
-            var idPromotion = cbbIdProduct.SelectedValue.ToString();
-            var warrantyPeriod = txtWarrantyPeriod.Text;
-            var inventory = txtInventory.Text;
-            var imeiNumber = txtImeiNumber.Text;
-            var idAccount = cbbIdAccount.SelectedValue.ToString();
-            if (!CheckNullInProductDetail(idProduct, idCpu, idProductDetail, idColor, storage, price, idPromotion, warrantyPeriod, inventory, imeiNumber, idAccount))
+            if (CheckCbb(cbbIdProduct, cbbIdColor, cbbIdCpu, cbbIdPromotion))
             {
-                if (CheckProductDetailIfExists(cbbIdProduct.SelectedValue.ToString()) == false)
+                var idProduct = cbbIdProduct.SelectedItem.ToString();
+                var idCpu = cbbIdCpu.SelectedItem.ToString();
+                var idProductDetail = txtIdProductDetail.Text;
+                var idColor = cbbIdColor.SelectedItem.ToString();
+                var storage = txtStorage.Text;
+                var price = txtPrice.Text;
+                var idPromotion = cbbIdProduct.SelectedItem.ToString();
+                var warrantyPeriod = txtWarrantyPeriod.Text;
+                var inventory = txtInventory.Text;
+                var imeiNumber = txtImeiNumber.Text;
+                var idAccount = txtIdAccount.Text;
+                if (!CheckNullInProductDetail(idProduct, idCpu, idProductDetail, idColor, storage, price, idPromotion, warrantyPeriod, inventory, imeiNumber, idAccount))
                 {
-                    var check = CheckIsNumberProductDetail(storage, price, warrantyPeriod, inventory);
-                    if (check == null)
+                    if (CheckProductDetailIfExists(cbbIdProduct.SelectedItem.ToString()) == false)
                     {
-                        if (productDetailBUS.AddNewProductDetail(idProduct, idProductDetail, idColor, int.Parse(storage), decimal.Parse(price), idPromotion, int.Parse(warrantyPeriod), int.Parse(inventory), idAccount))
-                            MessageBox.Show("Thêm thành công");
+                        var check = CheckIsNumberProductDetail(storage, price, warrantyPeriod, inventory);
+                        if (check == null)
+                        {
+                            if (productDetailBUS.AddNewProductDetail(idProduct, idProductDetail, idColor, int.Parse(storage), decimal.Parse(price), idPromotion, int.Parse(warrantyPeriod), int.Parse(inventory), idAccount))
+                                MessageBox.Show("Thêm thành công");
+                            else
+                                MessageBox.Show("Thêm thất bại");
+                        }
                         else
-                            MessageBox.Show("Thêm thất bại");
+                            MessageBox.Show(check);
                     }
                     else
-                        MessageBox.Show(check);
+                        MessageBox.Show("Product detail này đã tồn tại");
                 }
                 else
-                    MessageBox.Show("Product detail này đã tồn tại");
+                    MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm");
             }
             else
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm");
+                MessageBox.Show("Chọn lại giá trị từ các combo box");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var idProduct = cbbIdProduct.SelectedValue.ToString();
-            var idCpu = cbbIdCpu.SelectedValue.ToString();
-            var idProductDetail = txtIdProductDetail.Text;
-            var idColor = cbbIdColor.SelectedValue.ToString();
-            var storage = txtStorage.Text;
-            var price = txtPrice.Text;
-            var idPromotion = cbbIdProduct.SelectedValue.ToString();
-            var warrantyPeriod = txtWarrantyPeriod.Text;
-            var inventory = txtInventory.Text;
-            var imeiNumber = txtImeiNumber.Text;
-            var idAccount = cbbIdAccount.SelectedValue.ToString();
-            if (!CheckNullInProductDetail(idProduct, idCpu, idProductDetail, idColor, storage, price, idPromotion, warrantyPeriod, inventory, imeiNumber, idAccount))
+            if (CheckCbb(cbbIdProduct, cbbIdColor, cbbIdCpu, cbbIdPromotion))
             {
-                if (CheckProductDetailIfExists(cbbIdProduct.SelectedValue.ToString()) == false)
+                var idProduct = cbbIdProduct.Text;
+                var idCpu = cbbIdCpu.Text;
+                var idProductDetail = txtIdProductDetail.Text;
+                var idColor = cbbIdColor.Text;
+                var storage = txtStorage.Text;
+                var price = txtPrice.Text;
+                var idPromotion = cbbIdProduct.Text;
+                var warrantyPeriod = txtWarrantyPeriod.Text;
+                var inventory = txtInventory.Text;
+                var imeiNumber = txtImeiNumber.Text;
+                var idAccount = txtIdAccount.Text;
+                if (!CheckNullInProductDetail(idProduct, idCpu, idProductDetail, idColor, storage, price, idPromotion, warrantyPeriod, inventory, imeiNumber, idAccount))
                 {
-                    var check = CheckIsNumberProductDetail(storage, price, warrantyPeriod, inventory);
-                    if (check == null)
+                    if (CheckProductDetailIfExists(cbbIdProduct.SelectedItem.ToString()) == false)
                     {
-                        if (productDetailBUS.UpdateProductDetail(idProduct, idProductDetail, idColor, int.Parse(storage), decimal.Parse(price), idPromotion, int.Parse(warrantyPeriod), int.Parse(inventory), idAccount))
-                            MessageBox.Show("Sửa thành công");
+                        var check = CheckIsNumberProductDetail(storage, price, warrantyPeriod, inventory);
+                        if (check == null)
+                        {
+                            if (productDetailBUS.UpdateProductDetail(idProduct, idProductDetail, idColor, int.Parse(storage), decimal.Parse(price), idPromotion, int.Parse(warrantyPeriod), int.Parse(inventory), idAccount))
+                                MessageBox.Show("Sửa thành công");
+                            else
+                                MessageBox.Show("Sửa thất bại");
+                        }
                         else
-                            MessageBox.Show("Sửa thất bại");
+                            MessageBox.Show(check);
                     }
                     else
-                        MessageBox.Show(check);
+                        MessageBox.Show("Product detail này đã tồn tại");
                 }
                 else
-                    MessageBox.Show("Product detail này đã tồn tại");
+                    MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
             }
             else
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
+                MessageBox.Show("Chọn lại giá trị từ các combo box");
         }
 
         private void cbbIdProduct_DropDown(object sender, EventArgs e)
@@ -149,10 +190,56 @@ namespace DuAn1
         {
             LoadCbbWhenDropDown(cbbIdPromotion, promotionBUS.GetAllIdPromotion());
         }
-
-        private void cbbIdAccount_DropDown(object sender, EventArgs e)
+        private void ProductDeltailForm_Load(object sender, EventArgs e)
         {
-            LoadCbbWhenDropDown(cbbIdAccount, accountBUS.GetAllIDAccount());
+
+        }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void cbbIdCpu_Leave(object sender, EventArgs e)
+        {
+            if (cbbIdCpu.SelectedItem != null)
+            {
+                var id = cbbIdCpu.SelectedItem.ToString();
+                var cpu = cpuBUS.GetCpuById(id);
+                if (cpu != null)
+                {
+                    txtManufacturer.Text = cpu.Manufacturer;
+                    txtNameCpu.Text = cpu.NameCpu;
+                }
+            }
+        }
+        private void cbbIdColor_Leave(object sender, EventArgs e)
+        {
+            if (cbbIdColor.SelectedItem != null)
+            {
+                var color = colorBUS.GetProductColorById(cbbIdColor.SelectedItem.ToString());
+                if (color != null)
+                {
+                    txtColorName.Text = color.ColorName;
+                }
+            }
+        }
+
+        private void cbbIdPromotion_Leave(object sender, EventArgs e)
+        {
+            if (cbbIdPromotion.SelectedItem != null)
+            {
+                var promotion = promotionBUS.GetPromotionById(cbbIdPromotion.SelectedItem.ToString());
+                if (promotion != null)
+                {
+                    txtPromotionName.Text = promotion.PromotionName;
+                    txtDiscount.Text=promotion.Discount.ToString();
+                    dtpStartDate.Value=promotion.StartTime;
+                    if (promotion.EndTime == null)
+                        dtpEndDate.Visible = false;
+                    else
+                        dtpEndDate.Value = (DateTime)promotion.EndTime;
+                }
+            }
         }
     }
 }

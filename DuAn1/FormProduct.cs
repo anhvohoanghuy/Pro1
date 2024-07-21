@@ -47,6 +47,15 @@ namespace DuAn1
             dgvListProduct.Columns.Add("ProductStatus", "Product status");
             dgvListProduct.RowTemplate.Height = 100;
         }
+        public bool CheckCbb(params ComboBox[] cbbs)
+        {
+            foreach (ComboBox cbb in cbbs)
+            {
+                if (cbb.SelectedIndex == -1)
+                    return false;
+            }
+            return true;
+        }
         public void ShowOnDataGridView(List<Product> products)
         {
             dgvListProduct.Rows.Clear();
@@ -90,15 +99,15 @@ namespace DuAn1
         }
         public string CheckIsNumberInProduct(TextBox ram, TextBox pin, TextBox refreshRate, TextBox cameraResolution, TextBox screenSize)
         {
-            if (int.TryParse(ram.Text, out _))
+            if (!int.TryParse(ram.Text, out _))
                 return "Ram phải là số nguyên";
-            else if (int.TryParse(pin.Text, out _))
+            else if (!int.TryParse(pin.Text, out _))
                 return "Pin phải là số nguyên tính theo mAh";
-            else if (int.TryParse(refreshRate.Text, out _))
+            else if (!int.TryParse(refreshRate.Text, out _))
                 return "Refresh rate phải là số nguyên";
-            else if (double.TryParse(cameraResolution.Text, out _))
+            else if (!double.TryParse(cameraResolution.Text, out _))
                 return "Camera resolution phải là số";
-            else if (double.TryParse(screenSize.Text, out _))
+            else if (!double.TryParse(screenSize.Text, out _))
                 return "Screen size phải là số";
             return null;
         }
@@ -107,19 +116,25 @@ namespace DuAn1
             txtProductID.Text = string.Empty;
             txtProductImage.Clear();
             txtProductName.Clear();
-            cbbIDAccount.Text = string.Empty;
+            txtIdAccount.Clear();
             txtRam.Clear();
             txtPin.Clear();
             txtRefreshRate.Clear();
-            cbbIDAccount.Text = string.Empty;
+            cbbIDCompany.Text=string.Empty;
             cbbIDCPU.Text = string.Empty;
             txtScreenResolution.Clear();
             txtCameraResolution.Clear();
+            txtScreenSize.Clear();
             rdoActivated.Checked = true;
             rdoUnActivated.Checked = false;
         }
+        public List<Product> SearchByName(string name)
+        {
+            return productBUS.GetProductsByName(name);
+        }
         private void FormProduct_Load(object sender, EventArgs e)
         {
+            var idAccount =
             rdoActivated.Checked = true;
             LoadDataGridView();
             List<Product> products = productBUS.GetAllProduct();
@@ -155,83 +170,88 @@ namespace DuAn1
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            var productID = txtProductID.Text;
-            var productImage = txtProductImage.Text;
-            var productName = txtProductName.Text;
-            var idCompany = cbbIDCompany.SelectedItem.ToString();
-            var ram = txtRam.Text;
-            var pin = txtPin.Text;
-            var refreshRate = txtRefreshRate.Text;
-            var idAccount = cbbIDAccount.SelectedItem.ToString();
-            var idCPU = cbbIDCPU.SelectedItem.ToString();
-            var screenResolution = txtScreenResolution.Text;
-            var cameraResolution = txtCameraResolution.Text;
-            var screenSize = txtScreenSize.Text;
-            var status = rdoActivated.Checked ? true : false;
-            if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
+            if (CheckCbb(cbbIDCompany,cbbIDCPU))
             {
-                var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
-                if (checkNum != null)
+                var productID = txtProductID.Text;
+                var productImage = txtProductImage.Text;
+                var productName = txtProductName.Text;
+                var idCompany = cbbIDCompany.SelectedItem.ToString();
+                var ram = txtRam.Text;
+                var pin = txtPin.Text;
+                var refreshRate = txtRefreshRate.Text;
+                var idAccount = txtIdAccount.Text;
+                var idCPU = cbbIDCPU.SelectedItem.ToString();
+                var screenResolution = txtScreenResolution.Text;
+                var cameraResolution = txtCameraResolution.Text;
+                var screenSize = txtScreenSize.Text;
+                var status = rdoActivated.Checked ? true : false;
+               
+                if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
                 {
-                    if (productBUS.CheckProductIfExist(productID))
+                    var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
+                    if (checkNum == null)
                     {
-                        if (productBUS.AddNewProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status))
-                            MessageBox.Show("Thêm thành công");
+                        if (productBUS.CheckProductIfExist(productID))
+                        {
+                            if (productBUS.AddNewProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status))
+                                MessageBox.Show("Thêm thành công");
+                            else
+                                MessageBox.Show("Thêm thất bại");
+                        }
                         else
-                            MessageBox.Show("Thêm thất bại");
+                            MessageBox.Show("ID product này đã tồn tại");
                     }
                     else
-                        MessageBox.Show("ID product này đã tồn tại");
+                        MessageBox.Show(checkNum);
                 }
                 else
-                    MessageBox.Show(checkNum);
+                    MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm");
             }
             else
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi thêm");
+                MessageBox.Show("Chọn lại giá trị từ các combo box");
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var productID = txtProductID.Text;
-            var productImage = txtProductImage.Text;
-            var productName = txtProductName.Text;
-            var idCompany = cbbIDCompany.SelectedValue.ToString();
-            var ram = txtRam.Text;
-            var pin = txtPin.Text;
-            var refreshRate = txtRefreshRate.Text;
-            var idAccount = cbbIDAccount.SelectedValue.ToString();
-            var idCPU = cbbIDCPU.SelectedValue.ToString();
-            var screenResolution = txtScreenResolution.Text;
-            var cameraResolution = txtCameraResolution.Text;
-            var screenSize = txtScreenSize.Text;
-            var status = rdoActivated.Checked ? true : false;
-            if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
+            if(CheckCbb(cbbIDCompany, cbbIDCPU))
             {
-                var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
-                if (checkNum != null)
+                var productID = txtProductID.Text;
+                var productImage = txtProductImage.Text;
+                var productName = txtProductName.Text;
+                var idCompany = cbbIDCompany.Text;
+                var ram = txtRam.Text;
+                var pin = txtPin.Text;
+                var refreshRate = txtRefreshRate.Text;
+                var idAccount = txtIdAccount.Text;
+                var idCPU = cbbIDCPU.Text;
+                var screenResolution = txtScreenResolution.Text;
+                var cameraResolution = txtCameraResolution.Text;
+                var screenSize = txtScreenSize.Text;
+                var status = rdoActivated.Checked ? true : false;
+                if (CheckNull(productID, productImage, productName, idCompany, ram, pin, refreshRate, idAccount, idCPU, cameraResolution, screenResolution, screenSize) == false)
                 {
-                    if (productBUS.UpdateProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status))
-                        MessageBox.Show("Sửa thành công");
+                    var checkNum = CheckIsNumberInProduct(txtRam, txtPin, txtRefreshRate, txtCameraResolution, txtScreenSize);
+                    if (checkNum != null)
+                    {
+                        if (productBUS.UpdateProduct(productID, productImage, productName, idCompany, int.Parse(ram), idCPU, double.Parse(screenSize), screenResolution, int.Parse(refreshRate), double.Parse(cameraResolution), int.Parse(pin), idAccount, status))
+                            MessageBox.Show("Sửa thành công");
+                        else
+                            MessageBox.Show("Sửa thất bại");
+                    }
                     else
-                        MessageBox.Show("Sửa thất bại");
+                        MessageBox.Show(checkNum);
                 }
                 else
-                    MessageBox.Show(checkNum);
-            }
+                    MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
+            }    
             else
-                MessageBox.Show("Nhập đầy đủ thông tin trước khi sửa");
+                MessageBox.Show("Chọn lại giá trị từ các combo box");
         }
 
         private void cbbIDCompany_DropDown(object sender, EventArgs e)
         {
             LoadCbbWhenDropDown(cbbIDCompany, productCompanyBUS.GetAllIDCompany());
         }
-
-        private void cbbIDAccount_DropDown(object sender, EventArgs e)
-        {
-            LoadCbbWhenDropDown(cbbIDAccount, accountBUS.GetAllIDAccount());
-        }
-
         private void cbbIDCPU_DropDown(object sender, EventArgs e)
         {
             LoadCbbWhenDropDown(cbbIDCPU, cpuBUS.GetAllIDCpu());
@@ -239,39 +259,45 @@ namespace DuAn1
 
         private void dgvListProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex != -1)
+            if (e.RowIndex >=0 && e.RowIndex < productBUS.GetAllProduct().Count)
             {
                 DataGridViewRow row = dgvListProduct.Rows[e.RowIndex];
-                var idProduct= row.Cells[0].Value.ToString();
+                var idProduct = row.Cells[0].Value.ToString();
                 var product = productBUS.GetProductByID(idProduct);
                 txtProductID.Text = product.Idproduct;
-                txtProductImage.Text=product.ProductImage;
+                txtProductImage.Text = product.ProductImage;
                 txtProductName.Text = product.ProductName;
-                cbbIDCompany.Text=product.Idcompany;
-                txtRam.Text=product.Ram.ToString();
-                txtPin.Text=product.Pin.ToString();
-                txtRefreshRate.Text=product.RefreshRate.ToString();
-                cbbIDAccount.Text=product.Idaccount;
-                cbbIDCPU.Text=product.Idcpu;
-                txtScreenSize.Text=product.ScreenSize.ToString();
-                txtScreenResolution.Text=product.ScreenResolution.ToString();
-                txtCameraResolution.Text=product.CameraResolution.ToString();
+                cbbIDCompany.Text = product.Idcompany;
+                txtRam.Text = product.Ram.ToString();
+                txtPin.Text = product.Pin.ToString();
+                txtRefreshRate.Text = product.RefreshRate.ToString();
+                txtIdAccount.Text = product.Idaccount;
+                cbbIDCPU.Text = product.Idcpu;
+                txtScreenSize.Text = product.ScreenSize.ToString();
+                txtScreenResolution.Text = product.ScreenResolution.ToString();
+                txtCameraResolution.Text = product.CameraResolution.ToString();
                 if (product.ProductStatus)
                 {
                     rdoActivated.Checked = true;
                     rdoUnActivated.Checked = false;
-                } 
+                }
                 else
                 {
                     rdoActivated.Checked = false;
                     rdoUnActivated.Checked = true;
-                }    
+                }
             }
         }
 
         private void vbButton2_Click(object sender, EventArgs e)
         {
             ResetFormProduct();
+        }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            var listProduct = SearchByName(txtTimKiem.Text);
+            ShowOnDataGridView(listProduct);
         }
     }
 }
