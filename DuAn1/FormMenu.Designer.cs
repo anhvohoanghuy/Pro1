@@ -229,6 +229,7 @@
             btnStatistics.TextColor = Color.White;
             btnStatistics.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnStatistics.UseVisualStyleBackColor = false;
+            btnStatistics.Click += btnStatistics_Click;
             // 
             // btnEmployee
             // 
