@@ -114,6 +114,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(1209, 320);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // EmployeeId
             // 
@@ -438,6 +439,7 @@
             Controls.Add(groupBox2);
             Name = "NhanVienForm";
             Text = "NhanVienForm";
+            Load += NhanVienForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox1.ResumeLayout(false);
             panel1.ResumeLayout(false);

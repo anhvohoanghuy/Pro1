@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             groupBox2 = new GroupBox();
             dataGridView1 = new DataGridView();
+            IdAcount = new DataGridViewTextBoxColumn();
+            Password = new DataGridViewTextBoxColumn();
+            level = new DataGridViewTextBoxColumn();
+            NameAcount = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             label4 = new Label();
             label3 = new Label();
             txtEmail = new TextBox();
@@ -42,23 +47,19 @@
             label2 = new Label();
             label1 = new Label();
             panel1 = new Panel();
+            btnExcel = new CustomButton.VBButton();
+            vbButton3 = new CustomButton.VBButton();
+            txtTImKiem = new TextBox();
+            txtName = new TextBox();
+            label5 = new Label();
             cbbLevel = new ComboBox();
             vbButton1 = new CustomButton.VBButton();
             textBox7 = new TextBox();
-            vbButton2 = new CustomButton.VBButton();
+            btnresset = new CustomButton.VBButton();
             btnXoa = new CustomButton.VBButton();
             btnSua = new CustomButton.VBButton();
             btnThem = new CustomButton.VBButton();
             groupBox1 = new GroupBox();
-            txtName = new TextBox();
-            label5 = new Label();
-            IdAcount = new DataGridViewTextBoxColumn();
-            Password = new DataGridViewTextBoxColumn();
-            level = new DataGridViewTextBoxColumn();
-            NameAcount = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            vbButton3 = new CustomButton.VBButton();
-            textBox1 = new TextBox();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
@@ -75,54 +76,104 @@
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "Danh sách nhân viên";
+            groupBox2.Enter += groupBox2_Enter;
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = SystemColors.ButtonFace;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.Raised;
+            dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = Color.MediumSlateBlue;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.Control;
+            dataGridViewCellStyle1.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.Control;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeight = 29;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IdAcount, Password, level, NameAcount, Email });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.MediumPurple;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.MediumPurple;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.GridColor = Color.MediumSlateBlue;
             dataGridView1.Location = new Point(3, 27);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = SystemColors.Control;
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = SystemColors.HighlightText;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(1209, 320);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.DataBindingComplete += dataGridView1_DataBindingComplete;
+            // 
+            // IdAcount
+            // 
+            IdAcount.DataPropertyName = "Idaccount";
+            IdAcount.HeaderText = "Id Account";
+            IdAcount.MinimumWidth = 6;
+            IdAcount.Name = "IdAcount";
+            IdAcount.ReadOnly = true;
+            // 
+            // Password
+            // 
+            Password.DataPropertyName = "PassAccount";
+            Password.HeaderText = "Password";
+            Password.MinimumWidth = 6;
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            // 
+            // level
+            // 
+            level.DataPropertyName = "AccountLevel";
+            level.HeaderText = "Level";
+            level.MinimumWidth = 6;
+            level.Name = "level";
+            level.ReadOnly = true;
+            // 
+            // NameAcount
+            // 
+            NameAcount.DataPropertyName = "AccountName";
+            NameAcount.HeaderText = "Name";
+            NameAcount.MinimumWidth = 6;
+            NameAcount.Name = "NameAcount";
+            NameAcount.ReadOnly = true;
+            // 
+            // Email
+            // 
+            Email.DataPropertyName = "Email";
+            Email.HeaderText = "Email";
+            Email.MinimumWidth = 6;
+            Email.Name = "Email";
+            Email.ReadOnly = true;
             // 
             // label4
             // 
@@ -187,8 +238,9 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnExcel);
             panel1.Controls.Add(vbButton3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtTImKiem);
             panel1.Controls.Add(txtName);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(cbbLevel);
@@ -197,7 +249,7 @@
             panel1.Controls.Add(txtEmail);
             panel1.Controls.Add(vbButton1);
             panel1.Controls.Add(textBox7);
-            panel1.Controls.Add(vbButton2);
+            panel1.Controls.Add(btnresset);
             panel1.Controls.Add(btnXoa);
             panel1.Controls.Add(btnSua);
             panel1.Controls.Add(btnThem);
@@ -210,6 +262,76 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1121, 309);
             panel1.TabIndex = 0;
+            // 
+            // btnExcel
+            // 
+            btnExcel.Anchor = AnchorStyles.Left;
+            btnExcel.BackColor = Color.MediumSlateBlue;
+            btnExcel.BackgroundColor = Color.MediumSlateBlue;
+            btnExcel.BorderColor = Color.PaleVioletRed;
+            btnExcel.BorderRadius = 20;
+            btnExcel.BorderSize = 0;
+            btnExcel.FlatAppearance.BorderSize = 0;
+            btnExcel.FlatStyle = FlatStyle.Flat;
+            btnExcel.ForeColor = Color.White;
+            btnExcel.Location = new Point(837, 238);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new Size(135, 40);
+            btnExcel.TabIndex = 91;
+            btnExcel.Text = "Xuất excel";
+            btnExcel.TextColor = Color.White;
+            btnExcel.UseVisualStyleBackColor = false;
+            btnExcel.Click += btnExcel_Click;
+            // 
+            // vbButton3
+            // 
+            vbButton3.Anchor = AnchorStyles.Left;
+            vbButton3.BackColor = Color.White;
+            vbButton3.BackgroundColor = Color.White;
+            vbButton3.BorderColor = Color.White;
+            vbButton3.BorderRadius = 0;
+            vbButton3.BorderSize = 0;
+            vbButton3.FlatAppearance.BorderSize = 0;
+            vbButton3.FlatStyle = FlatStyle.Flat;
+            vbButton3.ForeColor = Color.White;
+            vbButton3.Image = Properties.Resources.search__1_3;
+            vbButton3.Location = new Point(389, 238);
+            vbButton3.Name = "vbButton3";
+            vbButton3.Size = new Size(72, 29);
+            vbButton3.TabIndex = 90;
+            vbButton3.TextColor = Color.White;
+            vbButton3.UseVisualStyleBackColor = false;
+            vbButton3.Click += vbButton3_Click;
+            // 
+            // txtTImKiem
+            // 
+            txtTImKiem.Anchor = AnchorStyles.Left;
+            txtTImKiem.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTImKiem.ForeColor = Color.Gray;
+            txtTImKiem.Location = new Point(67, 235);
+            txtTImKiem.Multiline = true;
+            txtTImKiem.Name = "txtTImKiem";
+            txtTImKiem.Size = new Size(403, 36);
+            txtTImKiem.TabIndex = 89;
+            txtTImKiem.Text = "Tìm kiếm";
+            txtTImKiem.Click += txtTImKiem_Click;
+            // 
+            // txtName
+            // 
+            txtName.Location = new Point(625, 50);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(158, 31);
+            txtName.TabIndex = 88;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(625, 17);
+            label5.Name = "label5";
+            label5.Size = new Size(59, 25);
+            label5.TabIndex = 87;
+            label5.Text = "Name";
             // 
             // cbbLevel
             // 
@@ -252,23 +374,24 @@
             textBox7.TabIndex = 80;
             textBox7.Text = "Tìm kiếm";
             // 
-            // vbButton2
+            // btnresset
             // 
-            vbButton2.BackColor = Color.MediumSlateBlue;
-            vbButton2.BackgroundColor = Color.MediumSlateBlue;
-            vbButton2.BorderColor = Color.PaleVioletRed;
-            vbButton2.BorderRadius = 20;
-            vbButton2.BorderSize = 0;
-            vbButton2.FlatAppearance.BorderSize = 0;
-            vbButton2.FlatStyle = FlatStyle.Flat;
-            vbButton2.ForeColor = Color.White;
-            vbButton2.Image = Properties.Resources.reset__1_;
-            vbButton2.Location = new Point(837, 185);
-            vbButton2.Name = "vbButton2";
-            vbButton2.Size = new Size(131, 40);
-            vbButton2.TabIndex = 79;
-            vbButton2.TextColor = Color.White;
-            vbButton2.UseVisualStyleBackColor = false;
+            btnresset.BackColor = Color.MediumSlateBlue;
+            btnresset.BackgroundColor = Color.MediumSlateBlue;
+            btnresset.BorderColor = Color.PaleVioletRed;
+            btnresset.BorderRadius = 20;
+            btnresset.BorderSize = 0;
+            btnresset.FlatAppearance.BorderSize = 0;
+            btnresset.FlatStyle = FlatStyle.Flat;
+            btnresset.ForeColor = Color.White;
+            btnresset.Image = Properties.Resources.reset__1_;
+            btnresset.Location = new Point(837, 185);
+            btnresset.Name = "btnresset";
+            btnresset.Size = new Size(131, 40);
+            btnresset.TabIndex = 79;
+            btnresset.TextColor = Color.White;
+            btnresset.UseVisualStyleBackColor = false;
+            btnresset.Click += btnresset_Click;
             // 
             // btnXoa
             // 
@@ -287,6 +410,7 @@
             btnXoa.Text = "Xóa";
             btnXoa.TextColor = Color.White;
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnSua
             // 
@@ -305,6 +429,7 @@
             btnSua.Text = "Sửa";
             btnSua.TextColor = Color.White;
             btnSua.UseVisualStyleBackColor = false;
+            btnSua.Click += btnSua_Click;
             // 
             // btnThem
             // 
@@ -323,6 +448,7 @@
             btnThem.Text = "Thêm";
             btnThem.TextColor = Color.White;
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // groupBox1
             // 
@@ -333,98 +459,17 @@
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             // 
-            // txtName
-            // 
-            txtName.Location = new Point(625, 50);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(158, 31);
-            txtName.TabIndex = 88;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(625, 17);
-            label5.Name = "label5";
-            label5.Size = new Size(59, 25);
-            label5.TabIndex = 87;
-            label5.Text = "Name";
-            // 
-            // IdAcount
-            // 
-            IdAcount.HeaderText = "Id Account";
-            IdAcount.MinimumWidth = 6;
-            IdAcount.Name = "IdAcount";
-            IdAcount.ReadOnly = true;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Password";
-            Password.MinimumWidth = 6;
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            // 
-            // level
-            // 
-            level.HeaderText = "Level";
-            level.MinimumWidth = 6;
-            level.Name = "level";
-            level.ReadOnly = true;
-            // 
-            // NameAcount
-            // 
-            NameAcount.HeaderText = "Name";
-            NameAcount.MinimumWidth = 6;
-            NameAcount.Name = "NameAcount";
-            NameAcount.ReadOnly = true;
-            // 
-            // Email
-            // 
-            Email.HeaderText = "Email";
-            Email.MinimumWidth = 6;
-            Email.Name = "Email";
-            Email.ReadOnly = true;
-            // 
-            // vbButton3
-            // 
-            vbButton3.Anchor = AnchorStyles.Left;
-            vbButton3.BackColor = Color.White;
-            vbButton3.BackgroundColor = Color.White;
-            vbButton3.BorderColor = Color.White;
-            vbButton3.BorderRadius = 0;
-            vbButton3.BorderSize = 0;
-            vbButton3.FlatAppearance.BorderSize = 0;
-            vbButton3.FlatStyle = FlatStyle.Flat;
-            vbButton3.ForeColor = Color.White;
-            vbButton3.Image = Properties.Resources.search__1_3;
-            vbButton3.Location = new Point(389, 238);
-            vbButton3.Name = "vbButton3";
-            vbButton3.Size = new Size(72, 29);
-            vbButton3.TabIndex = 90;
-            vbButton3.TextColor = Color.White;
-            vbButton3.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Left;
-            textBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.Gray;
-            textBox1.Location = new Point(67, 235);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(403, 36);
-            textBox1.TabIndex = 89;
-            textBox1.Text = "Tìm kiếm";
-            // 
             // TaiKhoanForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1442, 850);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "TaiKhoanForm";
             Text = "TaiKhoanForm";
+            Load += TaiKhoanForm_Load;
             groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
@@ -448,19 +493,20 @@
         private ComboBox cbbLevel;
         private CustomButton.VBButton vbButton1;
         private TextBox textBox7;
-        private CustomButton.VBButton vbButton2;
+        private CustomButton.VBButton btnresset;
         private CustomButton.VBButton btnXoa;
         private CustomButton.VBButton btnSua;
         private CustomButton.VBButton btnThem;
         private GroupBox groupBox1;
         private TextBox txtName;
         private Label label5;
+        private CustomButton.VBButton vbButton3;
+        private TextBox txtTImKiem;
         private DataGridViewTextBoxColumn IdAcount;
         private DataGridViewTextBoxColumn Password;
         private DataGridViewTextBoxColumn level;
         private DataGridViewTextBoxColumn NameAcount;
         private DataGridViewTextBoxColumn Email;
-        private CustomButton.VBButton vbButton3;
-        private TextBox textBox1;
+        private CustomButton.VBButton btnExcel;
     }
 }

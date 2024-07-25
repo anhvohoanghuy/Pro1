@@ -18,10 +18,17 @@ namespace DuAn1
         public FormMenu()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
-            this.FormBorderStyle = FormBorderStyle.None;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule;objKeyboardProcess = new LowLevelKeyboardProc(captureKey);ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
+            b = true; a();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ProcessModule objCurrentModule = Process.GetCurrentProcess().MainModule;objKeyboardProcess = new LowLevelKeyboardProc(captureKey);ptrHook = SetWindowsHookEx(13, objKeyboardProcess, GetModuleHandle(objCurrentModule.ModuleName), 0);
         }
-
+        bool b;
+        private void a()
+        {
+            if (b=true)
+            {
+                this.WindowState = FormWindowState.Maximized;
+                this.FormBorderStyle = FormBorderStyle.None;    
+            }
+        }
         private void FormMenu_Load(object sender, EventArgs e)
         {
             lblDateTime.Text = GetTimeNow();
@@ -96,7 +103,7 @@ namespace DuAn1
 
             }
         }
-
+        
         private void FormMenu_Resize(object sender, EventArgs e)
         {
 
@@ -150,14 +157,22 @@ namespace DuAn1
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất tài khoản không  ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); if (result == DialogResult.Yes) MessageBox.Show("Không cho thoát"); //{this.Hide(); DangNhapForm a = new DangNhapForm(); a.ShowDialog();}
+            if (_isEventEnabled)
+            {
+                DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất tài khoản không  ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); if (result == DialogResult.Yes) MessageBox.Show("Không cho thoát"); //{this.Hide(); DangNhapForm a = new DangNhapForm(); a.ShowDialog();}
+            }
+           
         }
-
+        private bool _isEventEnabled = true;
         private void btnCreateOrder_Click(object sender, EventArgs e)
         {
-            CreateOrderForm a = new CreateOrderForm();
+            _isEventEnabled=false;
+            CreateOrderForm a = new CreateOrderForm(); 
             LoadForm(a);
             ActiveColor(btnEmployee);
+            b = true;
+            
+                 
         }
 
         private void btnStatistics_Click(object sender, EventArgs e)
